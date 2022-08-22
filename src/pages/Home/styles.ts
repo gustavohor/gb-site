@@ -19,7 +19,7 @@ export const FirstContainer = styled.div`
 
   @media screen and (max-width: 750px) {
     padding: 0 1rem !important;
-    height: 52rem;
+    height: 44rem;
     flex-wrap: wrap;
   }
 
@@ -29,7 +29,7 @@ export const FirstContainer = styled.div`
     @media screen and (max-width: 750px) {
       width: 80%;
       text-align: left;
-      margin-top: 13rem;
+      margin-top: 4rem;
     }
 
     .quality {
@@ -195,7 +195,7 @@ export const PartnerContainer = styled.div`
     }
   }
 `;
-export const PartnerInfoContainer = styled.div`
+export const AboutUsContainer = styled.div`
   width: 100%;
   display: flex;
   background-color: #fcfcfc;
@@ -315,7 +315,7 @@ export const PartnerInfoContainer = styled.div`
 export const Products = styled.div`
   width: 100%;
   padding: 3.5rem 9rem 0 9rem;
-  height: 57.25rem;
+  height: 70rem;
   background: rgba(2, 53, 53, 0.9);
 
   span {
@@ -436,7 +436,14 @@ export const Products = styled.div`
         }
       }
       .productScreen {
-        display: none;
+        display: inline;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+        .productInfo {
+          display: none;
+        }
       }
     }
   }

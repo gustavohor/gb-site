@@ -4,7 +4,7 @@ import googleMap from '@/assets/Imagens/googleMap.svg';
 export default function team() {
   return (
     <ContactContainer>
-      <div className="div-Contacts">
+      <div id="Contact" className="div-Contacts">
         <span> CONTATO</span>
         <h2>Conta pra gente, como podemos ajudar seu negócio?</h2>
         <p>

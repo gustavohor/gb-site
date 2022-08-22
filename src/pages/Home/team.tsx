@@ -5,7 +5,7 @@ import Mapa from '@/assets/Imagens/map.png';
 export default function team() {
   return (
     <TeamContainer>
-      <div className="div-teamInfo">
+      <div id="Team" className="div-teamInfo">
         <span className="team">A EQUIPE</span>
         <h2>Um time de especialistas focados na missão</h2>
         <span className="check">

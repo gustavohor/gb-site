@@ -1,12 +1,12 @@
-import {PartnerInfoContainer} from './styles';
+import {AboutUsContainer} from './styles';
 import {CgArrowLongRight} from 'react-icons/cg';
 import Star from '@/assets/Icons/star.svg';
 import Like from '@/assets/Icons/like.svg';
 
-export default function partnerInfo() {
+export default function aboutUs() {
   return (
-    <PartnerInfoContainer>
-      <div className="div-info">
+    <AboutUsContainer>
+      <div id="aboutUs" className="div-info">
         <span>QUEM SOMOS</span>
         <h2>Parceiros para transformar seu negócio em algo mais funcional</h2>
         <span className="div-textMobile">
@@ -47,6 +47,6 @@ export default function partnerInfo() {
           <CgArrowLongRight style={{marginLeft: '1rem'}} size={30} />
         </h3>
       </div>
-    </PartnerInfoContainer>
+    </AboutUsContainer>
   );
 }

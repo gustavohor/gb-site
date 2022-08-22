@@ -1,8 +1,12 @@
+import {useState} from 'react';
 import {CgArrowLongRight} from 'react-icons/cg';
 import Logo from '../../assets/logo-gb.svg';
 import {Container} from './styles';
+import Menu from '@/assets/icons/menu.svg';
+import {ImCross} from 'react-icons/im';
 
 export default function Navbar() {
+  const [isOpen, setisOpen] = useState(false);
   return (
     <Container>
       <nav className="navbar">
@@ -10,24 +14,52 @@ export default function Navbar() {
           {' '}
           <img src={Logo} alt="Logo" />
         </div>
+        <div className="menuMobile">
+          <img src={Menu} onClick={() => setisOpen(!isOpen)} alt="Menu" />
+        </div>
         <div className="nav-menu">
           <ul>
             <li>
-              <a href="#">Quem Somos</a>
+              <a href="#aboutUs">Quem Somos</a>
             </li>
             <li>
-              <a href="#">Produtos</a>
+              <a href="#Products">Produtos</a>
             </li>
             <li>
-              <a href="#">Equipe</a>
+              <a href="#Team">Equipe</a>
             </li>
             <li>
-              <a className="contact" href="#">
+              <a className="contact" href="#Contact">
                 Fale conosco <CgArrowLongRight className="icon" size={25} />
               </a>
             </li>
           </ul>
         </div>
+        {isOpen && (
+          <div className="Mobile">
+            <ImCross
+              size={20}
+              className="mobileCross"
+              onClick={() => setisOpen(!isOpen)}
+            />
+            <ul>
+              <li>
+                <a href="#aboutUs">Quem Somos</a>
+              </li>
+              <li>
+                <a href="#Products">Produtos</a>
+              </li>
+              <li>
+                <a href="#Team">Equipe</a>
+              </li>
+              <li>
+                <a className="contact" href="#Contact">
+                  Fale conosco <CgArrowLongRight className="icon" size={25} />
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
     </Container>
   );

@@ -7,9 +7,10 @@ export const Container = styled.div`
   top: 0;
   backdrop-filter: blur(3px);
   height: ${(props) => props.theme.sizes.navbarHeight};
+  z-index: 20;
   border-bottom: 1px ridge #ffffff30;
   @media screen and (max-width: 800px) {
-    height: ${(props) => props.theme.sizes.navbarHeightMobile};
+    height: 4.313rem;
   }
 
   .navbar {
@@ -25,14 +26,26 @@ export const Container = styled.div`
     font-size: 0.875rem;
     color: #fff;
     align-content: center;
+    .menuMobile {
+      display: none;
+    }
     @media screen and (max-width: 1050px) {
       padding: 0 2rem;
+      display: flex;
     }
 
     @media screen and (max-width: 800px) {
-      padding: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      padding: 0 1rem;
+      flex-wrap: nowrap;
+      display: flex;
+      margin: 0;
+
+      .nav-logo-menu {
+        img {
+          width: 80%;
+          margin: 0;
+        }
+      }
     }
   }
 
@@ -90,6 +103,45 @@ export const Container = styled.div`
         height: 1.25rem;
         padding-left: 1rem;
         width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .navbar {
+      .nav-menu {
+        display: none;
+      }
+      .menuMobile {
+        display: block;
+      }
+      .Mobile {
+        position: fixed;
+        background-color: #015958;
+        height: 100rem;
+        top: 0;
+        right: 0;
+        width: 50%;
+        .mobileCross {
+          margin-left: 70%;
+          margin-top: 18px;
+        }
+        ul {
+          margin-top: 40px;
+          li {
+            list-style: none;
+            a {
+              text-decoration: none;
+              color: #ffff;
+              display: flex;
+              padding: 10px 20px;
+              .icon {
+                margin-left: 10px;
+                color: #3cfca0;
+              }
+            }
+          }
+        }
       }
     }
   }

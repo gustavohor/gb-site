@@ -3,7 +3,7 @@ import {Container} from './styles';
 import Navbar from '@/components/Navbar';
 import FirstContainer from './firstContainer';
 import Partner from './partner';
-import PartnerInfo from './partnerInfo';
+import AboutUs from './aboutUs';
 import Products from './Products';
 import Team from './team';
 import Testimonial from './testimonial';
@@ -17,7 +17,7 @@ export default function body() {
         <Navbar />
         <FirstContainer />
         <Partner />
-        <PartnerInfo />
+        <AboutUs />
         <Products />
         <Team />
         <Testimonial />

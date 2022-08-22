@@ -9,13 +9,13 @@ export default function Navbar() {
       <div className="div-FooterMenu">
         <ul>
           <li>
-            <a href="">Quem somos</a>
+            <a href="#aboutUs">Quem somos</a>
           </li>
           <li>
-            <a href="">Produtos</a>
+            <a href="#Products">Produtos</a>
           </li>
           <li>
-            <a href="">Equipe</a>
+            <a href="#Team">Equipe</a>
           </li>
         </ul>
       </div>

@@ -48,7 +48,7 @@ export default function products() {
   const isOpen = false;
   return (
     <Products>
-      <span> NOSSOS PRODUTOS</span>
+      <span id="Products"> NOSSOS PRODUTOS</span>
       <h2 className="productH2">Alguns de nossos sistemas e produtos</h2>
       <div className="productTop">
         <ul className="productList">
