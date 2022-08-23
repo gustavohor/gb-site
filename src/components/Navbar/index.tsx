@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {CgArrowLongRight} from 'react-icons/cg';
 import Logo from '../../assets/logo-gb.svg';
 import {Container} from './styles';
-import Menu from '@/assets/icons/menu.svg';
+import Menu from '@/assets/icons/Menu.svg';
 import {ImCross} from 'react-icons/im';
 
 export default function Navbar() {
