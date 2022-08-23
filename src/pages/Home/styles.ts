@@ -39,6 +39,10 @@ export const FirstContainer = styled.div`
       border: ${(props) => props.theme.colors.primaryGreenBelt} solid 1px;
       border-radius: 5px;
       padding: 7px;
+      .rectangle {
+        color: #3cfca0;
+        transform: rotate(45deg);
+      }
     }
 
     .title {
