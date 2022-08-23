@@ -1,7 +1,7 @@
 import Button from '@/@core/components/Button';
 import Banner from '@/assets/Imagens/bannerTop.svg';
-import rectangle from '@/assets/Icons/rectangle.svg';
 import {CgArrowLongRight} from 'react-icons/cg';
+import {IoMdSquare} from 'react-icons/io';
 import {FirstContainer} from './styles';
 
 export default function firstContainer() {
@@ -9,7 +9,7 @@ export default function firstContainer() {
     <FirstContainer>
       <div className="div-first-conteiner">
         <span className="quality">
-          <img src={rectangle} alt="Retangulo" /> Qualidade
+          <IoMdSquare className="rectangle" size={15} /> Qualidade
         </span>
         <h1 className="title">
           Entregamos produtos com<br></br>
