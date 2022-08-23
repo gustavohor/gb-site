@@ -1,8 +1,7 @@
 import {useState} from 'react';
 import {Products} from './styles';
 import screen from '@/assets/Imagens/screen.svg';
-import info from '@/assets/Icons/info.svg';
-import Accordion from '@/@core/components/Accordion';
+import info from '@/assets/Icons/Info.svg';
 
 const Sliders = [
   {
