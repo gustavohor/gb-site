@@ -2,7 +2,6 @@ import {PartnerContainer} from './styles';
 import CasadoAdubo from '@/assets/Parthers/CasaDoAdubo.svg';
 import AgroCasal from '@/assets/Parthers/AgroCasal.svg';
 import ArrownDown from '@/assets/Icons/Arrow-down.svg';
-import {CgArrowLongDown} from 'react-icons/cg';
 
 export default function partner() {
   return (
