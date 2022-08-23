@@ -1,5 +1,5 @@
 import Button from '@/@core/components/Button';
-import Banner from '@/assets/Imagens/bannerTop.png';
+import Banner from '@/assets/Imagens/bannerTop.svg';
 import rectangle from '@/assets/Icons/rectangle.svg';
 import {CgArrowLongRight} from 'react-icons/cg';
 import {FirstContainer} from './styles';
