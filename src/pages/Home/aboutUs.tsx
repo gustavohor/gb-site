@@ -1,7 +1,7 @@
 import {AboutUsContainer} from './styles';
 import {CgArrowLongRight} from 'react-icons/cg';
-import Star from '@/assets/Icons/star.svg';
-import Like from '@/assets/Icons/like.svg';
+import Star from '@/assets/Icons/Star.svg';
+import Like from '@/assets/Icons/Like.svg';
 
 export default function aboutUs() {
   return (
