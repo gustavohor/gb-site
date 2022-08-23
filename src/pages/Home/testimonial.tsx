@@ -3,7 +3,7 @@ import {TestimonialContainer} from './styles';
 import Testimonial from '@/assets/Imagens/testimonial.svg';
 import quotation from '@/assets/Icons/quotation.svg';
 import quotationReverse from '@/assets/Icons/quotationReverse.svg';
-import Arrow from '@/assets/Icons/arrow.svg';
+import Arrow from '@/assets/Icons/Arrow.svg';
 
 const Testemunho = [
   {
