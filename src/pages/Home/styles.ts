@@ -16,22 +16,9 @@ export const FirstContainer = styled.div`
   height: 42rem;
   background: rgba(2, 53, 53, 0.9);
   align-items: center;
-
-  @media screen and (max-width: 750px) {
-    padding: 0 1rem !important;
-    height: 44rem;
-    flex-wrap: wrap;
-  }
-
   .div-first-conteiner {
     width: 50%;
     float: left;
-    @media screen and (max-width: 750px) {
-      width: 80%;
-      text-align: left;
-      margin-top: 4rem;
-    }
-
     .quality {
       font-size: large;
       color: #fff;
@@ -44,7 +31,6 @@ export const FirstContainer = styled.div`
         transform: rotate(45deg);
       }
     }
-
     .title {
       font-size: 40px;
       color: #fff;
@@ -56,9 +42,6 @@ export const FirstContainer = styled.div`
         font-size: 40px;
         color: ${(props) => props.theme.colors.primaryGreenBelt};
       }
-      @media screen and (max-width: 750px) {
-        font-size: 36px;
-      }
     }
 
     .description {
@@ -66,9 +49,6 @@ export const FirstContainer = styled.div`
       font-weight: ${(props) => props.theme.fontWeight.regular};
       color: #fff;
       line-height: 24px;
-      @media screen and (max-width: 750px) {
-        margin: 0 rem;
-      }
     }
 
     .button-first-container {
@@ -90,13 +70,6 @@ export const FirstContainer = styled.div`
         height: 2.5rem;
         color: ${(props) => props.theme.colors.primaryGreenBelt};
       }
-      @media screen and (max-width: 750px) {
-        margin: 3rem 0 0 0;
-
-        .ArrowRight {
-          margin-left: 4.4rem;
-        }
-      }
     }
   }
 
@@ -104,8 +77,54 @@ export const FirstContainer = styled.div`
     .ImgCover {
       margin-top: 3.6rem;
       width: 100%;
+      height: 30.34rem;
       @media screen and (max-width: 750px) {
         display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    height: 65rem;
+    flex-direction: column;
+    padding: 0 1rem !important;
+    .div-first-conteiner {
+      width: 80%;
+      text-align: center;
+      margin-top: 9rem;
+      .button-first-container {
+        margin: 3rem auto;
+      }
+    }
+    .div-second-conteiner {
+      .ImgCover {
+        margin-top: 1rem;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      height: 44rem;
+      flex-direction: column;
+      padding: 0 1rem !important;
+      .div-first-conteiner {
+        width: 80%;
+        text-align: left;
+        margin-top: 9rem;
+        .title {
+          font-size: 36px;
+        }
+        .description {
+          margin: 0rem;
+        }
+        .button-first-container {
+          margin: 3rem 0 0 0;
+          .ArrowRight {
+            margin-left: 4.4rem;
+          }
+        }
+      }
+      .div-second-conteiner {
+        .ImgCover {
+          display: none;
+        }
       }
     }
   }
@@ -148,6 +167,18 @@ export const PartnerContainer = styled.div`
     flex-wrap: wrap;
     img {
       padding-right: 7.8rem;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .div-partner-text {
+      padding-left: 2rem;
+    }
+    .div-partners {
+      display: flex;
+      img {
+        width: 40%;
+        padding-right: 4rem;
+      }
     }
   }
   @media screen and (max-width: 750px) {
@@ -271,10 +302,13 @@ export const AboutUsContainer = styled.div`
       display: none;
     }
   }
+  @media screen and (max-width: 1050px) {
+    padding: 0 3rem;
+  }
   @media screen and (max-width: 750px) {
     flex-direction: column;
     padding: 0 1rem;
-    height: 43.875rem;
+    height: 40rem;
     .div-info {
       width: 100%;
       padding-top: 3.5rem;
@@ -306,11 +340,14 @@ export const AboutUsContainer = styled.div`
       width: 100%;
       padding-top: 0;
       padding-left: 0;
-
+      h3 {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+      }
       span {
         display: none;
       }
-      h3 {
+      h2 {
         padding-top: 2.5rem;
       }
     }
@@ -350,7 +387,11 @@ export const Products = styled.div`
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
       .productText {
         display: flex;
-
+        cursor: pointer;
+        align-items: center;
+        .Numbers {
+          margin: 1.96rem 1.5rem;
+        }
         &:hover {
           transition: 0.5s;
           left: 0;
@@ -363,7 +404,11 @@ export const Products = styled.div`
           .productNumber {
             color: #3cfca0;
           }
+          .Numbers {
+            color: #3cfca0;
+          }
         }
+
         h2 {
           font-size: ${(props) => props.theme.fontSize.extra};
           color: #fff;
@@ -372,6 +417,9 @@ export const Products = styled.div`
         .productNumber {
           color: #fff;
           padding: 2.75rem 2rem 2.75rem 1.5rem;
+        }
+        .productNumberActive {
+          color: #3cfca0;
         }
         .productDescription {
           align-self: center;
@@ -418,8 +466,13 @@ export const Products = styled.div`
       }
     }
   }
+  @media screen and (max-width: 1050px) {
+    padding: 3.5rem 3rem 0 3rem;
+    height: 50rem;
+  }
   @media screen and (max-width: 750px) {
     padding: 3.5rem 1rem 0 1rem;
+    height: 74rem;
     .productH2 {
       text-align: center;
       font-size: ${(props) => props.theme.fontSize.xxlarge};
@@ -492,6 +545,13 @@ export const TeamContainer = styled.div`
     width: 45%;
     margin-top: 5rem;
     padding-left: 1rem;
+  }
+  @media screen and (max-width: 1050px) {
+    height: 40rem;
+    padding: 0 2rem;
+    img {
+      width: 100%;
+    }
   }
   @media screen and (max-width: 750px) {
     height: 53.875rem;
@@ -622,6 +682,9 @@ export const TestimonialContainer = styled.div`
       line-height: 28px;
     }
   }
+  @media screen and (max-width: 1050px) {
+    padding: 3.5rem 3rem 0 3rem;
+  }
   @media screen and (max-width: 750px) {
     height: 45rem;
     padding: 3rem 1rem 0 1rem;
@@ -641,7 +704,7 @@ export const TestimonialContainer = styled.div`
     .div-imgPeople {
       flex-direction: column-reverse;
       .div-People {
-        padding-top: 3.125rem;
+        padding-top: 1.62rem;
         width: 100%;
         flex-direction: row;
         justify-content: center;
@@ -756,6 +819,10 @@ export const ContactContainer = styled.div`
       font-weight: ${(props) => props.theme.fontWeight.regular};
       color: #ffffff;
     }
+    .googleMap {
+      padding-right: 2rem;
+      width: 80%;
+    }
   }
   .div-ContactForm {
     width: 50%;
@@ -803,6 +870,9 @@ export const ContactContainer = styled.div`
       cursor: pointer;
     }
   }
+  @media screen and (max-width: 1050px) {
+    padding: 3.5rem 3rem 0 3rem;
+  }
   @media screen and (max-width: 750px) {
     padding: 3rem 1rem 0 1rem;
     height: 75rem;
@@ -830,6 +900,8 @@ export const ContactContainer = styled.div`
     .googleMapMobile {
       width: 100%;
       padding-top: 2rem;
+      width: 100%;
+      padding-right: 2rem;
     }
   }
 `;

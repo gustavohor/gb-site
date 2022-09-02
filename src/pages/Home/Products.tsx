@@ -44,7 +44,7 @@ const Sliders = [
 
 export default function products() {
   const [focusSlide, setFocusSlide] = useState(Sliders[0]);
-  const isOpen = false;
+
   return (
     <Products>
       <span id="Products"> NOSSOS PRODUTOS</span>
@@ -55,9 +55,11 @@ export default function products() {
             <li
               className="productText"
               key={slider.id}
-              onClick={() => setFocusSlide(slider)}
+              onClick={() => {
+                setFocusSlide(slider);
+              }}
             >
-              <h2 className="productNumber">{slider.id}</h2>
+              <h2 className="Numbers">{slider.id}</h2>
               <nav className="productDescription">
                 <h2>{slider.Title}</h2>
                 <p>{slider.subTitle}</p>

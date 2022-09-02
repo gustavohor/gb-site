@@ -16,7 +16,7 @@ const Testemunho = [
   },
   {
     id: 2,
-    img: quotation,
+    img: Testimonial,
     Nome: 'Breno',
     Cargo: 'CEO Casa do adubo',
     Depoimento:
@@ -24,7 +24,7 @@ const Testemunho = [
   },
   {
     id: 3,
-    img: quotation,
+    img: Testimonial,
     Nome: 'Roberta',
     Cargo: 'CEO Casa do adubo',
     Depoimento:
@@ -36,19 +36,24 @@ export default function testimonial() {
   const [focusSlide, setFocusSlide] = useState(Testemunho[0]);
 
   const handleClickPrevious = () => {
-    setFocusSlide(
-      Testemunho[focusSlide.id - 1]
-        ? Testemunho[focusSlide.id - 1]
-        : Testemunho[Testemunho.length - 1],
-    );
+    if (focusSlide.id === 1) {
+      setFocusSlide(Testemunho[Testemunho.length - 1]);
+      console.log(focusSlide);
+    } else if (focusSlide.id >= Testemunho.length) {
+      setFocusSlide(Testemunho[Testemunho.length - 1]);
+      console.log(focusSlide);
+    }
   };
 
   const handleClickNext = () => {
     setFocusSlide(
       focusSlide.id === Testemunho.length
         ? Testemunho[0]
-        : Testemunho[focusSlide.id + 1],
+        : Testemunho[focusSlide.id++],
     );
+    if (focusSlide.id === Testemunho.length) {
+      setFocusSlide(Testemunho[0]);
+    }
   };
 
   return (

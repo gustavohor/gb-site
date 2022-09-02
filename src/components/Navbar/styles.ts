@@ -117,14 +117,28 @@ export const Container = styled.div`
       }
       .Mobile {
         position: fixed;
-        background-color: #015958;
+        background-color: #063535;
         height: 100rem;
         top: 0;
         right: 0;
-        width: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .MobileHeader {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1.5rem 1rem 1.4rem 1rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          span {
+            color: #fff;
+            font-size: ${(props) => props.theme.fontSize.xlarge};
+            font-weight: ${(props) => props.theme.fontWeight.light};
+          }
+        }
         .mobileCross {
-          margin-left: 70%;
-          margin-top: 18px;
+          /* margin-left: 70%;
+          margin-top: 18px; */
         }
         ul {
           margin-top: 40px;
@@ -135,10 +149,9 @@ export const Container = styled.div`
               color: #ffff;
               display: flex;
               padding: 10px 20px;
-              .icon {
-                margin-left: 10px;
-                color: #3cfca0;
-              }
+              font-size: ${(props) => props.theme.fontSize.xxlarge};
+              font-weight: ${(props) => props.theme.fontWeight.light};
+              margin-bottom: 4rem;
             }
           }
         }
