@@ -6,7 +6,9 @@ export default function team() {
     <ContactContainer>
       <div id="Contact" className="div-Contacts">
         <span> CONTATO</span>
-        <h2>Conta pra gente, como podemos ajudar seu negócio?</h2>
+        <h2>
+          Conta pra gente, como podemos<br></br> ajudar seu negócio?
+        </h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ipsum
           arcu sed nec rhoncus. Lorem velit proin suspendisse vestibulum, orci

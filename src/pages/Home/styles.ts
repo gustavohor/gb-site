@@ -356,7 +356,7 @@ export const AboutUsContainer = styled.div`
 export const Products = styled.div`
   width: 100%;
   padding: 3.5rem 9rem 0 9rem;
-  height: 70rem;
+  height: 55rem;
   background: rgba(2, 53, 53, 0.9);
 
   span {
