@@ -11,11 +11,11 @@ export const Container = styled.div`
 `;
 export const FirstContainer = styled.div`
   width: 100%;
-  padding: 0 9rem;
+  padding: 4rem 9rem;
   display: flex;
-  height: 42rem;
   background: rgba(2, 53, 53, 0.9);
   align-items: center;
+  justify-content: center;
   .div-first-conteiner {
     width: 50%;
     float: left;
@@ -83,14 +83,13 @@ export const FirstContainer = styled.div`
       }
     }
   }
-  @media screen and (max-width: 1050px) {
-    height: 65rem;
+  @media screen and (max-width: 1300px) {
     flex-direction: column;
-    padding: 0 1rem !important;
+    padding: 2rem 1rem !important;
     .div-first-conteiner {
-      width: 80%;
+      width: 100%;
       text-align: center;
-      margin-top: 9rem;
+      margin-top: 7rem;
       .button-first-container {
         margin: 3rem auto;
       }
@@ -100,31 +99,30 @@ export const FirstContainer = styled.div`
         margin-top: 1rem;
       }
     }
-    @media screen and (max-width: 750px) {
-      height: 44rem;
-      flex-direction: column;
-      padding: 0 1rem !important;
-      .div-first-conteiner {
-        width: 80%;
-        text-align: left;
-        margin-top: 9rem;
-        .title {
-          font-size: 36px;
-        }
-        .description {
-          margin: 0rem;
-        }
-        .button-first-container {
-          margin: 3rem 0 0 0;
-          .ArrowRight {
-            margin-left: 4.4rem;
-          }
+  }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    padding: 0 1rem !important;
+    .div-first-conteiner {
+      width: 100%;
+      text-align: left;
+      margin: 7rem 0 3.5rem 0;
+      .title {
+        font-size: 36px;
+      }
+      .description {
+        margin: 0rem;
+      }
+      .button-first-container {
+        margin: 3rem 0 0 0;
+        .ArrowRight {
+          margin-left: 4.4rem;
         }
       }
-      .div-second-conteiner {
-        .ImgCover {
-          display: none;
-        }
+    }
+    .div-second-conteiner {
+      .ImgCover {
+        display: none;
       }
     }
   }
@@ -235,10 +233,10 @@ export const AboutUsContainer = styled.div`
   display: flex;
   background-color: #fcfcfc;
   padding: 0 9rem;
-  height: 37.188rem;
+
   .div-info {
     width: 50%;
-    padding-top: 6rem;
+    padding: 6rem 0;
     span {
       font-size: ${(props) => props.theme.fontSize.medium};
       line-height: 16px;
@@ -305,13 +303,15 @@ export const AboutUsContainer = styled.div`
   @media screen and (max-width: 1050px) {
     padding: 0 3rem;
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 900px) {
     flex-direction: column;
     padding: 0 1rem;
-    height: 40rem;
+    margin: 3.5rem 0;
+    display: flex;
+    justify-content: center;
     .div-info {
       width: 100%;
-      padding-top: 3.5rem;
+      padding: 0 0;
       h2 {
         font-size: ${(props) => props.theme.fontSize.xxlarge};
         padding-bottom: 2.5rem;
@@ -355,10 +355,8 @@ export const AboutUsContainer = styled.div`
 `;
 export const Products = styled.div`
   width: 100%;
-  padding: 3.5rem 9rem 0 9rem;
-  height: 55rem;
+  padding: 5rem 9rem 5rem 9rem;
   background: rgba(2, 53, 53, 0.9);
-
   span {
     display: flex;
     justify-content: center;
@@ -374,9 +372,11 @@ export const Products = styled.div`
     font-size: ${(props) => props.theme.fontSize.xxxlarge};
     font-weight: ${(props) => props.theme.fontWeight.semiBold};
     color: #fff;
+    text-align: center;
+
     line-height: 40px;
   }
-  .productTop {
+  .productDesktop {
     margin-top: 5rem;
     display: flex;
     flex-direction: row;
@@ -401,9 +401,6 @@ export const Products = styled.div`
             rgba(60, 252, 160, 0) 101.31%
           );
           border-left: 5px solid #3cfca0;
-          .productNumber {
-            color: #3cfca0;
-          }
           .Numbers {
             color: #3cfca0;
           }
@@ -414,12 +411,45 @@ export const Products = styled.div`
           color: #fff;
           padding-bottom: 0.5rem;
         }
-        .productNumber {
-          color: #fff;
-          padding: 2.75rem 2rem 2.75rem 1.5rem;
+        .productDescription {
+          align-self: center;
+          padding-right: 2.3rem;
+
+          h2 {
+            color: #fff;
+            font-size: ${(props) => props.theme.fontSize.large};
+            line-height: 16px;
+            opacity: 0.87;
+          }
+          p {
+            color: #fff;
+            font-size: ${(props) => props.theme.fontSize.large};
+            font-weight: ${(props) => props.theme.fontWeight.regular};
+            opacity: 0.6;
+            line-height: 24px;
+          }
         }
-        .productNumberActive {
+      }
+      .productContainerActive {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        transition: 0.5s;
+        left: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(60, 252, 160, 0.15) 65.74%,
+          rgba(60, 252, 160, 0) 101.31%
+        );
+        border-left: 5px solid #3cfca0;
+        .Numbers {
           color: #3cfca0;
+          margin: 1.96rem 1.5rem;
+        }
+        h2 {
+          font-size: ${(props) => props.theme.fontSize.extra};
+          color: #fff;
+          padding-bottom: 0.5rem;
         }
         .productDescription {
           align-self: center;
@@ -466,40 +496,126 @@ export const Products = styled.div`
       }
     }
   }
-  @media screen and (max-width: 1050px) {
-    padding: 3.5rem 3rem 0 3rem;
-    height: 50rem;
+  .productScreenMobile {
+    display: none;
   }
-  @media screen and (max-width: 750px) {
-    padding: 3.5rem 1rem 0 1rem;
-    height: 74rem;
+  @media screen and (max-width: 1300px) {
+    padding: 3.5rem 2rem 3.5rem 2rem;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 3.5rem 1rem 3.5rem 1rem;
     .productH2 {
       text-align: center;
-      font-size: ${(props) => props.theme.fontSize.xxlarge};
+      font-size: 22px;
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
     }
-    .productTop {
-      flex-direction: column;
+    .productDesktop {
+      display: none;
+    }
+    .productScreenMobile {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
       .productList {
         width: 100%;
+        font-size: ${(props) => props.theme.fontSize.large};
+        font-weight: ${(props) => props.theme.fontWeight.semiBold};
         .productText {
+          display: flex;
+          cursor: pointer;
+          margin: 0.5rem 0;
+          align-items: center;
+          .Numbers {
+            margin: 1.96rem 1.5rem;
+          }
+          &:hover {
+            transition: 0.5s;
+            left: 0;
+            background: linear-gradient(
+              90deg,
+              rgba(60, 252, 160, 0.15) 65.74%,
+              rgba(60, 252, 160, 0) 101.31%
+            );
+            border-left: 5px solid #3cfca0;
+            .Numbers {
+              color: #3cfca0;
+            }
+          }
+          h2 {
+            font-size: ${(props) => props.theme.fontSize.extra};
+            color: #fff;
+            padding-bottom: 0.5rem;
+          }
           .productDescription {
-            padding-right: 1rem;
-            .productScreenMobile {
-              display: inline;
-              width: 100%;
+            align-self: center;
+            padding-right: 2.3rem;
+
+            h2 {
+              color: #fff;
+              font-size: ${(props) => props.theme.fontSize.large};
+              line-height: 16px;
+              opacity: 0.87;
+            }
+            p {
+              color: #fff;
+              font-size: ${(props) => props.theme.fontSize.medium};
+              font-weight: ${(props) => props.theme.fontWeight.regular};
+              opacity: 0.6;
+              line-height: 24px;
             }
           }
         }
-      }
-      .productScreen {
-        display: inline;
-        width: 100%;
-        img {
-          width: 100%;
+        .productContainerActive {
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          transition: 0.5s;
+          left: 0;
+          background: linear-gradient(
+            90deg,
+            rgba(60, 252, 160, 0.15) 65.74%,
+            rgba(60, 252, 160, 0) 101.31%
+          );
+          border-left: 5px solid #3cfca0;
+          margin-bottom: 0.625rem;
+          padding: 0.5rem 0;
+          .Numbers {
+            color: #3cfca0;
+            margin: 1.96rem 1rem;
+          }
+          h2 {
+            font-size: ${(props) => props.theme.fontSize.extra};
+            color: #fff;
+            padding-bottom: 0.5rem;
+          }
+          .productDescription {
+            align-self: center;
+            padding-right: 2.3rem;
+
+            h2 {
+              color: #fff;
+              font-size: ${(props) => props.theme.fontSize.large};
+              line-height: 16px;
+              opacity: 0.87;
+            }
+            p {
+              color: #fff;
+              font-size: ${(props) => props.theme.fontSize.medium};
+              font-weight: ${(props) => props.theme.fontWeight.regular};
+              opacity: 0.6;
+              line-height: 24px;
+            }
+            .productScreenMobile {
+              display: none;
+            }
+          }
         }
-        .productInfo {
-          display: none;
+        .productImg {
+          width: 100%;
+          img.imgScreen {
+            width: 100%;
+          }
         }
       }
     }
@@ -510,7 +626,6 @@ export const TeamContainer = styled.div`
   display: flex;
   background-color: #fff;
   padding: 0 9rem;
-  height: 48.438rem;
   .div-teamInfo {
     width: 65%;
     .team {
@@ -545,22 +660,23 @@ export const TeamContainer = styled.div`
     width: 45%;
     margin-top: 5rem;
     padding-left: 1rem;
+    img {
+      width: 100%;
+      max-height: 38rem;
+    }
   }
-  @media screen and (max-width: 1050px) {
-    height: 40rem;
+  @media screen and (max-width: 1300px) {
     padding: 0 2rem;
     img {
       width: 100%;
     }
   }
-  @media screen and (max-width: 750px) {
-    height: 53.875rem;
-    padding: 0 1rem;
+  @media screen and (max-width: 900px) {
+    padding: 3.5rem 1rem;
     flex-direction: column;
     .div-teamInfo {
       width: 100%;
-      padding-top: 3.5rem;
-      width: 100%;
+      padding-top: 0;
       span {
         font-size: ${(props) => props.theme.fontSize.medium};
       }
@@ -577,9 +693,6 @@ export const TeamContainer = styled.div`
     .div-teamMap {
       width: 100%;
       padding: 0;
-      img {
-        height: 22rem;
-      }
     }
   }
 `;
@@ -614,25 +727,12 @@ export const TestimonialContainer = styled.div`
     width: 100%;
     display: flex;
     margin-top: 3rem;
-
-    .div-People {
-      width: 35%;
+    .div-testimonial {
       display: flex;
-      flex-wrap: wrap;
       flex-direction: column;
-      align-content: flex-end;
-      .div-PeopleInfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        span {
-          align-items: center;
-        }
-      }
-      img {
-        padding-bottom: 1.5rem;
-      }
+      align-items: center;
       span {
+        padding: 1.3rem 0 0 0;
         line-height: 25px;
         font-size: ${(props) => props.theme.fontSize.large};
         font-weight: ${(props) => props.theme.fontWeight.medium};
@@ -644,50 +744,13 @@ export const TestimonialContainer = styled.div`
         display: flex;
         align-self: center;
       }
-      .mobile {
-        display: none;
-      }
-      .ArrowRightMobile {
-        display: none;
-      }
-      .ArrowLeftMobile {
-        display: none;
-      }
-    }
-  }
-  .div-testimonial {
-    width: 65%;
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    .quotationMarksTop {
-      padding-left: 3.5rem;
-    }
-    .ArrowRight {
-      margin-left: 1rem;
-      margin-top: 2.1rem;
-    }
-    .ArrowLeft {
-      margin-top: 2.1rem;
-      margin-left: 3rem;
-      transform: rotate(-180deg);
-    }
-    span {
-      padding-left: 4.25rem;
-      padding-right: 1rem;
-      font-size: ${(props) => props.theme.fontSize.xlarge};
-      font-weight: ${(props) => props.theme.fontWeight.regular};
-      line-height: 28px;
     }
   }
   @media screen and (max-width: 1050px) {
     padding: 3.5rem 3rem 0 3rem;
   }
-  @media screen and (max-width: 750px) {
-    height: 45rem;
-    padding: 3rem 1rem 0 1rem;
+  @media screen and (max-width: 900px) {
+    padding: 3.5rem 1rem;
     .div-ParterTalkTop {
       span {
         font-size: ${(props) => props.theme.fontSize.medium};
@@ -787,16 +850,15 @@ export const TestimonialContainer = styled.div`
 export const ContactContainer = styled.div`
   display: flex;
   width: 100%;
-  padding: 3.5rem 9rem 0 9rem;
+  padding: 5.5rem 9rem 5.5rem 9rem;
   background: rgba(2, 53, 53, 0.9);
-  height: 54.688rem;
   display: flex;
   .googleMapMobile {
     display: none;
   }
   .div-Contacts {
     width: 50%;
-    padding-top: 5.5rem;
+    padding-top: 3.5rem;
     span {
       font-size: ${(props) => props.theme.fontSize.large};
       line-height: 16px;
@@ -870,12 +932,11 @@ export const ContactContainer = styled.div`
       cursor: pointer;
     }
   }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1300px) {
     padding: 3.5rem 3rem 0 3rem;
   }
-  @media screen and (max-width: 750px) {
-    padding: 3rem 1rem 0 1rem;
-    height: 75rem;
+  @media screen and (max-width: 900px) {
+    padding: 4rem 1rem;
     display: flex;
     flex-direction: column;
     .div-Contacts {

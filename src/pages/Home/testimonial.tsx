@@ -33,28 +33,7 @@ const Testemunho = [
 ];
 
 export default function testimonial() {
-  const [focusSlide, setFocusSlide] = useState(Testemunho[0]);
-
-  const handleClickPrevious = () => {
-    if (focusSlide.id === 1) {
-      setFocusSlide(Testemunho[Testemunho.length - 1]);
-      console.log(focusSlide);
-    } else if (focusSlide.id >= Testemunho.length) {
-      setFocusSlide(Testemunho[Testemunho.length - 1]);
-      console.log(focusSlide);
-    }
-  };
-
-  const handleClickNext = () => {
-    setFocusSlide(
-      focusSlide.id === Testemunho.length
-        ? Testemunho[0]
-        : Testemunho[focusSlide.id++],
-    );
-    if (focusSlide.id === Testemunho.length) {
-      setFocusSlide(Testemunho[0]);
-    }
-  };
+  const [focusSlide, setFocusSlide] = useState(Testemunho);
 
   return (
     <TestimonialContainer>
@@ -63,7 +42,19 @@ export default function testimonial() {
         <h2>Confira oque nossos parceiros estão falando</h2>
       </div>
       <div className="div-imgPeople">
-        <div className="div-People">
+        {Testemunho.map((testimonial) => (
+          <div>
+            <div className="div-testimonial">
+              <img src={testimonial.img} alt={testimonial.Nome} />
+              <span>{testimonial.Nome}</span>
+              <h4>{testimonial.Cargo}</h4>
+            </div>
+            <div>
+              <span>{testimonial.Depoimento}</span>
+            </div>
+          </div>
+        ))}
+        {/* <div className="div-People">
           <img src={focusSlide.img} alt={focusSlide.Nome} />
           <div className="div-PeopleInfo">
             <>
@@ -108,7 +99,7 @@ export default function testimonial() {
             className="ArrowRight"
             alt={focusSlide.Nome}
           />
-        </div>
+        </div> */}
       </div>
     </TestimonialContainer>
   );

@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
+import Accordion from '@/@core/components/Accordion';
 import {Products} from './styles';
 import screen from '@/assets/Imagens/screen.svg';
 import info from '@/assets/Icons/Info.svg';
@@ -44,16 +45,21 @@ const Sliders = [
 
 export default function products() {
   const [focusSlide, setFocusSlide] = useState(Sliders[0]);
+  const [isOpen] = useState(true);
 
   return (
     <Products>
       <span id="Products"> NOSSOS PRODUTOS</span>
       <h2 className="productH2">Alguns de nossos sistemas e produtos</h2>
-      <div className="productTop">
+      <div className="productDesktop">
         <ul className="productList">
           {Sliders.map((slider) => (
             <li
-              className="productText"
+              className={
+                focusSlide.id === slider.id
+                  ? 'productContainerActive'
+                  : 'productText'
+              }
               key={slider.id}
               onClick={() => {
                 setFocusSlide(slider);
@@ -74,6 +80,44 @@ export default function products() {
             <p>{focusSlide.imgDescrition}</p>
           </section>
         </div>
+      </div>
+      <div className="productScreenMobile">
+        <Accordion isOpen={isOpen}>
+          {(ref) => (
+            <ul className="productList" ref={ref}>
+              {Sliders.map((slider) => (
+                <>
+                  <li
+                    className={
+                      focusSlide.id === slider.id
+                        ? 'productContainerActive'
+                        : 'productText'
+                    }
+                    key={slider.id}
+                    onClick={() => {
+                      setFocusSlide(slider);
+                    }}
+                  >
+                    <h2 className="Numbers">{slider.id}</h2>
+                    <nav className="productDescription">
+                      <h2>{slider.Title}</h2>
+                      <p>{slider.subTitle}</p>
+                    </nav>
+                  </li>
+                  {focusSlide.id === slider.id && (
+                    <nav className="productImg">
+                      <img
+                        className="imgScreen"
+                        src={focusSlide.img}
+                        alt={focusSlide.imgDescrition}
+                      />
+                    </nav>
+                  )}
+                </>
+              ))}
+            </ul>
+          )}
+        </Accordion>
       </div>
     </Products>
   );
