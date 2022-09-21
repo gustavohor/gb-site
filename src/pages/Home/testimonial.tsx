@@ -1,39 +1,44 @@
-import {useState} from 'react';
+import {useSwiper} from 'swiper/react';
 import {TestimonialContainer} from './styles';
 import Testimonial from '@/assets/Imagens/testimonial.svg';
+import {BsArrowRightCircle, BsArrowLeftCircle} from 'react-icons/bs';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import {Autoplay, Pagination, Navigation} from 'swiper';
+
 import quotation from '@/assets/Icons/quotation.svg';
-import quotationReverse from '@/assets/Icons/quotationReverse.svg';
-import Arrow from '@/assets/Icons/Arrow.svg';
 
 const Testemunho = [
   {
     id: 1,
     img: Testimonial,
-    Nome: 'Cláudio Mendes',
-    Cargo: 'CEO Casa do adubo',
-    Depoimento:
+    nome: 'Cláudio Mendes',
+    cargo: 'CEO Casa do adubo',
+    depoimento:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus.',
   },
   {
     id: 2,
     img: Testimonial,
-    Nome: 'Breno',
-    Cargo: 'CEO Casa do adubo',
-    Depoimento:
+    nome: 'Breno',
+    cargo: 'CEO Casa do adubo',
+    depoimento:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus.',
   },
   {
     id: 3,
     img: Testimonial,
-    Nome: 'Roberta',
-    Cargo: 'CEO Casa do adubo',
-    Depoimento:
+    nome: 'Roberta',
+    cargo: 'CEO Casa do adubo',
+    depoimento:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus.',
   },
 ];
 
 export default function testimonial() {
-  const [focusSlide, setFocusSlide] = useState(Testemunho);
+  const swiper = useSwiper();
 
   return (
     <TestimonialContainer>
@@ -42,64 +47,44 @@ export default function testimonial() {
         <h2>Confira oque nossos parceiros estão falando</h2>
       </div>
       <div className="div-imgPeople">
-        {Testemunho.map((testimonial) => (
-          <div>
-            <div className="div-testimonial">
-              <img src={testimonial.img} alt={testimonial.Nome} />
-              <span>{testimonial.Nome}</span>
-              <h4>{testimonial.Cargo}</h4>
-            </div>
-            <div>
-              <span>{testimonial.Depoimento}</span>
-            </div>
-          </div>
-        ))}
-        {/* <div className="div-People">
-          <img src={focusSlide.img} alt={focusSlide.Nome} />
-          <div className="div-PeopleInfo">
+        <Swiper
+          spaceBetween={60}
+          centeredSlides={true}
+          // autoplay={{
+          //   delay: 5000,
+          //   disableOnInteraction: false,
+          // }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {Testemunho.map((testimonial) => (
             <>
-              <span>{focusSlide.Nome}</span>
-              <h4>{focusSlide.Cargo}</h4>
+              <SwiperSlide className="swiperSlide">
+                <div className="swiperSlideInfo">
+                  <img src={testimonial.img} alt={testimonial.nome} />
+                  <section>
+                    <span>{testimonial.nome}</span>
+                    <h4>{testimonial.cargo}</h4>
+                  </section>
+                </div>
+                <div className="swiperSliderDepoiment">
+                  <img src={quotation} alt="quotation" />
+                  <br></br>
+                  <span>{testimonial.depoimento}</span>
+                  <section>
+                    <div className="swiper-button-prev">
+                      <BsArrowLeftCircle size={30} />
+                    </div>
+                    <div>
+                      <button onClick={() => swiper.slideNext()}>teste</button>
+                    </div>
+                  </section>
+                </div>
+              </SwiperSlide>
             </>
-          </div>
-          <div className="mobile">
-            <img
-              src={Arrow}
-              onClick={handleClickPrevious}
-              className="ArrowLeft"
-              alt={focusSlide.Nome}
-            />
-            <img
-              src={Arrow}
-              onClick={handleClickNext}
-              className="ArrowRight"
-              alt={focusSlide.Nome}
-            />
-          </div>
-        </div>
-        <div className="div-testimonial">
-          <img className="quotationMarksTop" src={quotation} alt="Aspas" />
-          <span>
-            {focusSlide.Depoimento}
-            <img
-              className="quotationMarksBottom"
-              src={quotationReverse}
-              alt="Aspas Reversas"
-            />
-          </span>
-          <img
-            src={Arrow}
-            onClick={handleClickPrevious}
-            className="ArrowLeft"
-            alt={focusSlide.Nome}
-          />
-          <img
-            src={Arrow}
-            onClick={handleClickNext}
-            className="ArrowRight"
-            alt={focusSlide.Nome}
-          />
-        </div> */}
+          ))}
+        </Swiper>
       </div>
     </TestimonialContainer>
   );

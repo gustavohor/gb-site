@@ -15,7 +15,7 @@ export const FirstContainer = styled.div`
   display: flex;
   background: rgba(2, 53, 53, 0.9);
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   .div-first-conteiner {
     width: 50%;
     float: left;
@@ -721,128 +721,109 @@ export const TestimonialContainer = styled.div`
       font-size: ${(props) => props.theme.fontSize.xxxlarge};
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
       line-height: 40px;
+      text-align: center;
     }
   }
   .div-imgPeople {
     width: 100%;
     display: flex;
     margin-top: 3rem;
-    .div-testimonial {
+
+    .swiper-button-prev::after {
+      display: none;
+    }
+
+    .swiper-button-next::after {
+      display: none;
+    }
+    .swiperSlide {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      span {
-        padding: 1.3rem 0 0 0;
-        line-height: 25px;
-        font-size: ${(props) => props.theme.fontSize.large};
-        font-weight: ${(props) => props.theme.fontWeight.medium};
-        color: #191a15;
+      flex-direction: row;
+      padding: 0 10rem;
+      .swiperSlideInfo {
         display: flex;
-        align-self: center;
-      }
-      h4 {
-        display: flex;
-        align-self: center;
-      }
-    }
-  }
-  @media screen and (max-width: 1050px) {
-    padding: 3.5rem 3rem 0 3rem;
-  }
-  @media screen and (max-width: 900px) {
-    padding: 3.5rem 1rem;
-    .div-ParterTalkTop {
-      span {
-        font-size: ${(props) => props.theme.fontSize.medium};
-        text-align: center;
-        font-weight: ${(props) => props.theme.fontWeight.medium};
-      }
-      h2 {
-        font-size: ${(props) => props.theme.fontSize.xxlarge};
-        line-height: 34px;
-        text-align: center;
-        font-weight: ${(props) => props.theme.fontWeight.semiBold};
-      }
-    }
-    .div-imgPeople {
-      flex-direction: column-reverse;
-      .div-People {
-        padding-top: 1.62rem;
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        img {
-          width: 40%;
-          margin-right: 1.25rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        span {
+          margin: 1.3rem 0 0.5rem 0;
+          font-size: 18px;
+          font-weight: ${(props) => props.theme.fontWeight.medium};
         }
-        .div-PeopleInfo {
+        h4 {
+          font-size: 18px;
+          font-weight: 700;
+        }
+        section {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          span {
-            font-size: 18px;
-            font-weight: ${(props) => props.theme.fontWeight.medium};
-            line-height: 24px;
-            color: #191a15;
-            align-self: flex-start;
-          }
-          h4 {
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 24px;
-            color: #191a15;
-            align-self: flex-start;
-          }
+          align-items: center;
         }
-        .ArrowRightMobile {
-          color: #6a6a6ac7;
-          margin-top: 4.125rem;
-          margin-right: 0.75rem;
-          display: inline;
+      }
+      .swiperSliderDepoiment {
+        margin-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        span {
+          margin-left: 1rem;
         }
-        .ArrowLeftMobile {
-          margin-top: 4.125rem;
-          margin-left: 0.75rem;
-          display: inline;
-        }
-        .mobile {
+        section {
           display: flex;
-          .ArrowLeft {
-            transform: rotate(-180deg);
+          padding-top: 2.25rem;
+          .swiper-button-next {
+            margin-top: 0;
+            position: unset;
+            cursor: pointer;
           }
-          .ArrowRight {
-            padding-top: 1.5rem;
-            padding-bottom: 0%;
-            transform: rotate(0deg);
+          .swiper-button-prev {
+            margin-top: 0;
+            margin-right: 1.5rem;
+            position: unset;
+            cursor: pointer;
           }
         }
-      }
-      .div-testimonial {
-        width: 100%;
-      }
-      span {
-        padding-left: 0;
-        padding-right: 0;
       }
     }
-    .div-testimonial {
-      .quotationMarksTop {
-        padding-left: 0;
-        margin-bottom: 0.875rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .div-imgPeople {
+      .swiperSlide {
+        padding: 0 3rem;
       }
-      span {
-        font-size: ${(props) => props.theme.fontSize.large};
-        font-weight: ${(props) => props.theme.fontWeight.regular};
-        line-height: 24px;
-      }
-      .quotationMarksBottom {
-        display: none;
-      }
-      .ArrowRight {
-        display: none;
-      }
-      .ArrowLeft {
-        display: none;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 3.5rem 1rem 0 1rem;
+    .div-imgPeople {
+      width: 100%;
+      display: flex;
+      .swiperSlide {
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column-reverse;
+        .swiperSlideInfo {
+          display: flex;
+          flex-direction: row;
+          margin-top: 1.6rem;
+          img {
+            width: 40%;
+          }
+          section {
+            margin-left: 1.25rem;
+          }
+        }
+        .swiperSliderDepoiment {
+          width: 100%;
+          margin-left: 0;
+
+          span {
+            margin-left: 0;
+          }
+        }
       }
     }
   }
