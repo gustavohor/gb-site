@@ -14,6 +14,18 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx">
+      const favicon = document.querySelector('link[rel="icon"]') ;
+
+      const darkTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      if (darkTheme.matches) {
+        favicon.href = '/src/assets/logo-small-dark.svg';
+      }
+      else{
+        favicon.href = '/src/assets/logo-small.svg';
+      }
+
+
+    </script>
   </body>
 </html>

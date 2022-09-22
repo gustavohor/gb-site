@@ -4,6 +4,7 @@ import Logo from '../../assets/logo-gb.svg';
 import {Container} from './styles';
 import Menu from '@/assets/Icons/Menu.svg';
 import {HiOutlineX} from 'react-icons/hi';
+import {Link} from 'react-scroll';
 
 export default function Navbar() {
   const [isOpen, setisOpen] = useState(false);
@@ -20,18 +21,49 @@ export default function Navbar() {
         <div className="nav-menu">
           <ul>
             <li>
-              <a href="#aboutUs">Quem Somos</a>
+              <Link
+                to="aboutUs"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Quem Somos
+              </Link>
             </li>
             <li>
-              <a href="#Products">Produtos</a>
+              <Link
+                to="Products"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Produtos
+              </Link>
             </li>
             <li>
-              <a href="#Team">Equipe</a>
+              <Link
+                to="Team"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Equipe
+              </Link>
             </li>
             <li>
-              <a className="contact" href="#Contact">
+              <Link
+                className="contact"
+                to="Contact"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
                 Fale conosco <CgArrowLongRight className="icon" size={25} />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -52,28 +84,53 @@ export default function Navbar() {
               </div>
               <ul>
                 <li>
-                  <a href="#aboutUs" onClick={() => setisOpen(false)}>
+                  <Link
+                    to="aboutUs"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    onClick={() => setisOpen(false)}
+                  >
                     Quem Somos
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#Products" onClick={() => setisOpen(false)}>
+                  <Link
+                    to="Products"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    onClick={() => setisOpen(false)}
+                  >
                     Produtos
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#Team" onClick={() => setisOpen(false)}>
+                  <Link
+                    to="Products"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    onClick={() => setisOpen(false)}
+                  >
                     Equipe
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="contact"
-                    href="#Contact"
+                    to="Contact"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
                     onClick={() => setisOpen(false)}
                   >
                     Fale conosco
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

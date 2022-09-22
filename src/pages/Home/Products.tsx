@@ -48,8 +48,8 @@ export default function products() {
   const [isOpen] = useState(true);
 
   return (
-    <Products>
-      <span id="Products"> NOSSOS PRODUTOS</span>
+    <Products id="Products">
+      <span> NOSSOS PRODUTOS</span>
       <h2 className="productH2">Alguns de nossos sistemas e produtos</h2>
       <div className="productDesktop">
         <ul className="productList">

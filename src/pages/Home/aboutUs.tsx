@@ -5,7 +5,7 @@ import Like from '@/assets/Icons/Like.svg';
 
 export default function aboutUs() {
   return (
-    <AboutUsContainer id="aboutUs">
+    <AboutUsContainer>
       <div className="topAboutUs">
         <div className="div-info">
           <span>QUEM SOMOS</span>

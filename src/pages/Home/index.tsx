@@ -1,5 +1,4 @@
 import {Container} from './styles';
-
 import Navbar from '@/components/Navbar';
 import FirstContainer from './firstContainer';
 import Partner from './partner';

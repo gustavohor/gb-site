@@ -85,6 +85,7 @@ export const Container = styled.div`
       color: #fff;
       text-decoration: none;
       padding-right: 3.5rem;
+      cursor: pointer;
       @media screen and (max-width: 800px) {
         padding: 0;
       }
