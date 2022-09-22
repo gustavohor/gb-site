@@ -78,7 +78,7 @@ export default function testimonial() {
           <span> DEPOIMENTOS</span>
           <h2>Confira o que nossos parceiros estão falando</h2>
         </div>
-        <div>
+        <div className="prevSwiper">
           <Swiper
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper.el;

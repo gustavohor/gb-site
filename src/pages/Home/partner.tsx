@@ -19,7 +19,11 @@ export default function partner() {
             className="logoCasal"
             alt="Agrodistribuidor casal"
           />
-          <img src={CasadoAdubo} alt=" Casa do Adubo" />
+          <img
+            src={CasadoAdubo}
+            className="logoCasadoAdubo"
+            alt=" Casa do Adubo"
+          />
         </div>
       </div>
     </PartnerContainer>

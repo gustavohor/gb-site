@@ -189,8 +189,10 @@ export const PartnerContainer = styled.div`
     .div-partners {
       display: flex;
       img {
-        width: 40%;
         padding-right: 4rem;
+        .logoCasadoAdubo {
+          width: 24%;
+        }
       }
     }
   }
@@ -732,7 +734,7 @@ export const TestimonialContainer = styled.div`
   .Testimonial {
     width: 100%;
     max-width: 1200px;
-    padding: 3.5rem 9rem 0 9rem;
+    padding: 3.5rem 0;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -823,6 +825,9 @@ export const TestimonialContainer = styled.div`
   @media screen and (max-width: 1200px) {
     .Testimonial {
       padding: 3.5rem 2rem;
+      .prevSwiper {
+        margin-bottom: -15rem;
+      }
       .swiper-slide.swiper-slide-active {
       }
       .swiperSlideInfo {
@@ -848,6 +853,9 @@ export const TestimonialContainer = styled.div`
   @media screen and (max-width: 900px) {
     .Testimonial {
       padding: 3.5rem 1rem 0 1rem;
+      .prevSwiper {
+        margin-bottom: 0;
+      }
       .swiper-slide.swiper-slide-active {
         display: flex;
         flex-direction: column-reverse;
