@@ -17,7 +17,7 @@ export default function team() {
           </p>
           <iframe
             className="googleMap"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d661.3522379343137!2d-40.37648162241383!3d-20.33446162869784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83c1c14868acb%3A0x50a431a89f543bcc!2sCasa%20do%20Adubo%20-%20Cariacica!5e0!3m2!1spt-BR!2sbr!4v1663819244028!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.178343439605!2d-40.37688860000001!3d-20.3342498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83c1c74d12739%3A0xbaf20461bcb818d2!2sR.%20Antonio%20Leandro%20Da%20Silva%2C%2060%20-%20Alto%20Lage%2C%20Cariacica%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1663887934289!5m2!1spt-BR!2sbr"
             width="500"
             height="300"
             loading="lazy"
@@ -47,9 +47,9 @@ export default function team() {
         </div>
         <iframe
           className="googleMapMobile"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d661.3522379343137!2d-40.37648162241383!3d-20.33446162869784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83c1c14868acb%3A0x50a431a89f543bcc!2sCasa%20do%20Adubo%20-%20Cariacica!5e0!3m2!1spt-BR!2sbr!4v1663819244028!5m2!1spt-BR!2sbr"
-          width="100%"
-          height="500"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.178343439605!2d-40.37688860000001!3d-20.3342498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83c1c74d12739%3A0xbaf20461bcb818d2!2sR.%20Antonio%20Leandro%20Da%20Silva%2C%2060%20-%20Alto%20Lage%2C%20Cariacica%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1663887934289!5m2!1spt-BR!2sbr"
+          width="500"
+          height="300"
           loading="lazy"
         ></iframe>
       </div>
