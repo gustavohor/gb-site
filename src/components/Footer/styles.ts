@@ -99,4 +99,11 @@ export const Footer = styled.div`
       color: #ffffff;
     }
   }
+  @media screen and (max-width: 400px) {
+    .div-FooterMenu {
+      ul li a {
+        padding: 0 10px 0 0;
+      }
+    }
+  }
 `;
