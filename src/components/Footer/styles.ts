@@ -1,21 +1,28 @@
 import styled from 'styled-components';
 export const Footer = styled.div`
   width: 100%;
-  height: 10.7rem;
   display: flex;
-  padding: 0 9rem;
+  padding: 2rem 1rem;
   border-top: 2px solid #ffffff09;
   background: rgba(2, 53, 53, 0.9);
-  .div-FooterMenu {
-    width: 33%;
+  justify-content: center;
+
+  .Footer {
+    max-width: 1200px;
     display: flex;
-    padding-top: 2.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .div-FooterMenu {
+    display: flex;
+    width: 33%;
+    padding: 1.5rem 0;
     ul {
       display: flex;
       li {
         list-style-type: none;
         a {
-          padding: 16px;
+          padding: 20px;
           text-decoration: none;
           color: #fff;
         }
@@ -23,13 +30,12 @@ export const Footer = styled.div`
     }
   }
   .div-FooterLogo {
-    width: 33%;
+    width: 50%;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     display: flex;
     img {
       padding-top: 1.5rem;
-      width: 11.68rem;
     }
     p {
       padding-top: 2.25rem;
@@ -55,20 +61,22 @@ export const Footer = styled.div`
   .FooterTextMobile {
     display: none;
   }
-  @media screen and (max-width: 750px) {
-    padding: 0 1rem;
+  @media screen and (max-width: 1200px) {
     flex-direction: row;
     flex-wrap: wrap;
+    .Footer {
+      display: flex;
+      flex-direction: column;
+    }
     .div-FooterMenu {
-      display: none;
+      width: 100%;
+      justify-content: center;
     }
     .div-FooterLogo {
-      width: 50%;
+      width: 100%;
+      align-items: center;
       img {
-        width: 80%;
-      }
-      .FooterText {
-        display: none;
+        width: 30%;
       }
     }
     .div-FooterRS {

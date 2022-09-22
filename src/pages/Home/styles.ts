@@ -11,11 +11,11 @@ export const Container = styled.div`
 `;
 export const FirstContainer = styled.div`
   width: 100%;
-  padding: 4rem 9rem;
+  padding: 10rem 1rem 2rem 1rem;
   display: flex;
   background: rgba(2, 53, 53, 0.9);
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   .div-first-conteiner {
     width: 50%;
     float: left;
@@ -61,6 +61,10 @@ export const FirstContainer = styled.div`
       margin-top: 4.5rem;
       height: 3.5rem;
       padding: 0 0 0 1.3rem;
+      &:hover {
+        background-color: #023535;
+        color: #fff;
+      }
 
       .ArrowRight {
         margin-left: 11rem;
@@ -69,44 +73,46 @@ export const FirstContainer = styled.div`
         width: 3.5rem;
         height: 2.5rem;
         color: ${(props) => props.theme.colors.primaryGreenBelt};
+        &:hover {
+          color: #023535;
+          background-color: ${(props) => props.theme.colors.primaryGreenBelt};
+        }
       }
     }
   }
 
   .div-second-conteiner {
     .ImgCover {
-      margin-top: 3.6rem;
-      width: 100%;
-      height: 30.34rem;
-      @media screen and (max-width: 750px) {
-        display: none;
-      }
+      width: auto;
     }
   }
   @media screen and (max-width: 1300px) {
-    flex-direction: column;
     padding: 2rem 1rem !important;
     .div-first-conteiner {
-      width: 100%;
-      text-align: center;
+      width: 50%;
+      text-align: left;
       margin-top: 7rem;
+      align-self: center;
       .button-first-container {
-        margin: 3rem auto;
+        margin: 3rem 0;
       }
     }
     .div-second-conteiner {
+      width: 50%;
+      margin-top: 7rem;
       .ImgCover {
-        margin-top: 1rem;
+        width: 100%;
       }
     }
   }
   @media screen and (max-width: 900px) {
     flex-direction: column;
+    width: 100%;
     padding: 0 1rem !important;
     .div-first-conteiner {
       width: 100%;
       text-align: left;
-      margin: 7rem 0 3.5rem 0;
+      margin: 8.5rem 0 3.5rem 0;
       .title {
         font-size: 36px;
       }
@@ -121,6 +127,7 @@ export const FirstContainer = styled.div`
       }
     }
     .div-second-conteiner {
+      width: 0%;
       .ImgCover {
         display: none;
       }
@@ -130,22 +137,28 @@ export const FirstContainer = styled.div`
 export const PartnerContainer = styled.div`
   width: 100%;
   display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(34, 93, 93, 1) 37%, #023535 0%);
+  .Partner {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+  }
 
   .div-partner-text {
-    width: 37.5%;
-    min-width: 37.5%;
+    max-width: 37%;
+    width: 100%;
     background-color: #225d5d;
     display: flex;
     align-items: center;
     position: relative;
-    padding-left: 9rem;
+    justify-content: flex-end;
 
     span {
       font-size: ${(props) => props.theme.fontSize.large};
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
       color: #fff;
       text-transform: uppercase;
-      padding-right: 5.3rem;
     }
     .ArrowDown {
       top: 50%;
@@ -167,9 +180,11 @@ export const PartnerContainer = styled.div`
       padding-right: 7.8rem;
     }
   }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1200px) {
     .div-partner-text {
-      padding-left: 2rem;
+      span {
+        padding: 0 1rem;
+      }
     }
     .div-partners {
       display: flex;
@@ -179,21 +194,26 @@ export const PartnerContainer = styled.div`
       }
     }
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 900px) {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
 
+    .Partner {
+      flex-direction: column;
+    }
+
     .div-partner-text {
       width: 100%;
-      height: 5rem;
+      max-width: 100%;
       text-align: center;
-      padding: 1.6rem 4.5rem 1.6rem 4.5rem;
+      padding: 2rem;
       justify-content: center;
 
       span {
         font-size: ${(props) => props.theme.fontSize.small};
         padding-right: 0;
+        max-width: 299px;
       }
       .ArrowDown {
         top: 100%;
@@ -232,8 +252,12 @@ export const AboutUsContainer = styled.div`
   width: 100%;
   display: flex;
   background-color: #fcfcfc;
-  padding: 0 9rem;
-
+  justify-content: center;
+  .topAboutUs {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+  }
   .div-info {
     width: 50%;
     padding: 6rem 0;
@@ -300,15 +324,17 @@ export const AboutUsContainer = styled.div`
       display: none;
     }
   }
-  @media screen and (max-width: 1050px) {
-    padding: 0 3rem;
+  @media screen and (max-width: 1300px) {
+    padding: 2rem 1rem !important;
   }
   @media screen and (max-width: 900px) {
     flex-direction: column;
-    padding: 0 1rem;
-    margin: 3.5rem 0;
+    padding: 3.5rem 1rem !important;
     display: flex;
     justify-content: center;
+    .topAboutUs {
+      flex-direction: column;
+    }
     .div-info {
       width: 100%;
       padding: 0 0;
@@ -355,8 +381,11 @@ export const AboutUsContainer = styled.div`
 `;
 export const Products = styled.div`
   width: 100%;
-  padding: 5rem 9rem 5rem 9rem;
+  padding: 5rem 0;
   background: rgba(2, 53, 53, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   span {
     display: flex;
     justify-content: center;
@@ -381,6 +410,7 @@ export const Products = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 1200px;
     .productList {
       width: 40%;
       font-size: ${(props) => props.theme.fontSize.large};
@@ -499,8 +529,8 @@ export const Products = styled.div`
   .productScreenMobile {
     display: none;
   }
-  @media screen and (max-width: 1300px) {
-    padding: 3.5rem 2rem 3.5rem 2rem;
+  @media screen and (max-width: 1200px) {
+    padding: 5rem 1rem;
   }
   @media screen and (max-width: 900px) {
     padding: 3.5rem 1rem 3.5rem 1rem;
@@ -526,6 +556,7 @@ export const Products = styled.div`
           cursor: pointer;
           margin: 0.5rem 0;
           align-items: center;
+          border-top: 1px rgb(255, 255, 255, 0.15) solid;
           .Numbers {
             margin: 1.96rem 1.5rem;
           }
@@ -625,14 +656,17 @@ export const TeamContainer = styled.div`
   width: 100%;
   display: flex;
   background-color: #fff;
-  padding: 0 9rem;
+  padding: 6.5rem 1rem;
+  justify-content: center;
+  .Team {
+    display: flex;
+    max-width: 1200px;
+  }
   .div-teamInfo {
-    width: 65%;
+    width: 50%;
     .team {
       opacity: 0.6;
     }
-    width: 50%;
-    padding-top: 6.5rem;
     span {
       font-size: ${(props) => props.theme.fontSize.medium};
       line-height: 16px;
@@ -658,22 +692,18 @@ export const TeamContainer = styled.div`
   }
   .div-teamMap {
     width: 45%;
-    margin-top: 5rem;
-    padding-left: 1rem;
-    img {
-      width: 100%;
-      max-height: 38rem;
-    }
-  }
-  @media screen and (max-width: 1300px) {
-    padding: 0 2rem;
     img {
       width: 100%;
     }
   }
+
   @media screen and (max-width: 900px) {
     padding: 3.5rem 1rem;
-    flex-direction: column;
+    justify-content: flex-start;
+
+    .Team {
+      flex-direction: column;
+    }
     .div-teamInfo {
       width: 100%;
       padding-top: 0;
@@ -692,21 +722,27 @@ export const TeamContainer = styled.div`
     }
     .div-teamMap {
       width: 100%;
-      padding: 0;
+      padding: 2.75rem 0 0 0;
     }
   }
 `;
 export const TestimonialContainer = styled.div`
   width: 100%;
-  padding: 3.5rem 9rem 0 9rem;
-  background-color: #f7f7f7;
-  height: 38.6rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-
+  background-color: #fcfcfc;
+  .Testimonial {
+    width: 100%;
+    max-width: 1200px;
+    padding: 3.5rem 9rem 0 9rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+  }
   .div-ParterTalkTop {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     span {
       display: flex;
@@ -722,124 +758,152 @@ export const TestimonialContainer = styled.div`
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
       line-height: 40px;
       text-align: center;
+      margin-bottom: 2.1rem;
+      max-width: 552px;
     }
   }
-  .div-imgPeople {
-    width: 100%;
+  .swiper-slide.swiper-slide-active {
     display: flex;
-    margin-top: 3rem;
-
-    .swiper-button-prev::after {
-      display: none;
+    align-items: center;
+  }
+  .swiperSlideInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    img {
+      width: 100%;
     }
-
-    .swiper-button-next::after {
-      display: none;
-    }
-    .swiperSlide {
+    section {
       display: flex;
-      flex-direction: row;
-      padding: 0 10rem;
+      flex-direction: column;
+      align-items: center;
+      span {
+        margin-top: 1.375rem;
+        font-size: 18px;
+        font-weight: ${(props) => props.theme.fontWeight.medium};
+        padding-bottom: 0.5rem;
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+  .swiperSliderDepoiment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    img {
+      margin-left: 2.1rem;
+    }
+    span {
+      margin-left: 4rem;
+      font-size: ${(props) => props.theme.fontSize.xlarge};
+      font-weight: ${(props) => props.theme.fontWeight.regular};
+      line-height: 24px;
+    }
+  }
+  .div-Button {
+    position: relative;
+    display: flex;
+    top: -170px;
+    z-index: 999;
+    justify-content: flex-end;
+    width: 46%;
+    .buttonPrev {
+      background-color: transparent;
+    }
+    .buttonNext {
+      margin-left: 1.25rem;
+      background-color: transparent;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .Testimonial {
+      padding: 3.5rem 2rem;
+      .swiper-slide.swiper-slide-active {
+      }
       .swiperSlideInfo {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        span {
-          margin: 1.3rem 0 0.5rem 0;
-          font-size: 18px;
-          font-weight: ${(props) => props.theme.fontWeight.medium};
-        }
-        h4 {
-          font-size: 18px;
-          font-weight: 700;
-        }
-        section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+        width: 30%;
+        img {
+          width: 100%;
         }
       }
       .swiperSliderDepoiment {
-        margin-left: 3rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        width: 70%;
+        margin: 2rem 0 2rem 0;
+      }
+      .div-Button {
+        position: relative;
+        width: 84%;
         justify-content: center;
-        span {
-          margin-left: 1rem;
-        }
-        section {
-          display: flex;
-          padding-top: 2.25rem;
-          .swiper-button-next {
-            margin-top: 0;
-            position: unset;
-            cursor: pointer;
-          }
-          .swiper-button-prev {
-            margin-top: 0;
-            margin-right: 1.5rem;
-            position: unset;
-            cursor: pointer;
-          }
-        }
+        top: -270px;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
       }
     }
   }
-
-  @media screen and (max-width: 1200px) {
-    .div-imgPeople {
-      .swiperSlide {
-        padding: 0 3rem;
-      }
-    }
-  }
-
   @media screen and (max-width: 900px) {
-    padding: 3.5rem 1rem 0 1rem;
-    .div-imgPeople {
-      width: 100%;
-      display: flex;
-      .swiperSlide {
-        padding: 0 !important;
+    .Testimonial {
+      padding: 3.5rem 1rem 0 1rem;
+      .swiper-slide.swiper-slide-active {
         display: flex;
         flex-direction: column-reverse;
-        .swiperSlideInfo {
-          display: flex;
-          flex-direction: row;
-          margin-top: 1.6rem;
-          img {
-            width: 40%;
-          }
-          section {
-            margin-left: 1.25rem;
+        section {
+          h4 {
+            text-align: center;
           }
         }
-        .swiperSliderDepoiment {
-          width: 100%;
+      }
+      .swiperSlideInfo {
+        width: 100%;
+        img {
+          width: auto;
+        }
+      }
+      .swiperSliderDepoiment {
+        width: 100%;
+        img {
           margin-left: 0;
-
-          span {
-            margin-left: 0;
-          }
         }
+        span {
+          margin-left: 0;
+          font-size: ${(props) => props.theme.fontSize.large};
+        }
+      }
+      .div-Button {
+        position: unset;
+        width: 100%;
+        justify-content: center;
+        top: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .swiperSlideInfo {
+      img {
+        width: 100%;
       }
     }
   }
 `;
 export const ContactContainer = styled.div`
-  display: flex;
   width: 100%;
-  padding: 5.5rem 9rem 5.5rem 9rem;
+  padding: 5.5rem 1rem;
   background: rgba(2, 53, 53, 0.9);
   display: flex;
+  justify-content: center;
+  .contactContainer {
+    display: flex;
+    max-width: 1200px;
+  }
   .googleMapMobile {
     display: none;
   }
   .div-Contacts {
     width: 50%;
-    padding-top: 3.5rem;
     span {
       font-size: ${(props) => props.theme.fontSize.large};
       line-height: 16px;
@@ -853,6 +917,7 @@ export const ContactContainer = styled.div`
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
       line-height: 40px;
       color: #ffffff;
+      max-width: 579px;
     }
     p {
       padding-top: 1.5rem;
@@ -863,17 +928,14 @@ export const ContactContainer = styled.div`
       color: #ffffff;
     }
     .googleMap {
-      padding-right: 2rem;
-      width: 80%;
+      margin-top: 6rem;
     }
   }
   .div-ContactForm {
     width: 50%;
-    height: 41.5rem;
     border-radius: 5px;
     background-color: #fff;
     padding: 2rem 2.3rem;
-    margin-top: 3.8rem;
 
     h2 {
       font-size: ${(props) => props.theme.fontSize.xlarge};
@@ -913,13 +975,13 @@ export const ContactContainer = styled.div`
       cursor: pointer;
     }
   }
-  @media screen and (max-width: 1300px) {
-    padding: 3.5rem 3rem 0 3rem;
-  }
-  @media screen and (max-width: 900px) {
+
+  @media screen and (max-width: 1200px) {
     padding: 4rem 1rem;
     display: flex;
-    flex-direction: column;
+    .contactContainer {
+      flex-direction: column;
+    }
     .div-Contacts {
       width: 100%;
       padding-top: 0;
@@ -935,15 +997,15 @@ export const ContactContainer = styled.div`
       }
     }
     .div-ContactForm {
-      height: 41.5rem;
       width: 100%;
       padding: 1.5rem 1.5rem 2.3rem 1.5rem;
+      margin-top: 2.5rem;
     }
     .googleMapMobile {
       width: 100%;
       padding-top: 2rem;
       width: 100%;
-      padding-right: 2rem;
+      display: block;
     }
   }
 `;

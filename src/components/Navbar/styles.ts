@@ -9,19 +9,22 @@ export const Container = styled.div`
   height: ${(props) => props.theme.sizes.navbarHeight};
   z-index: 20;
   border-bottom: 1px ridge #ffffff30;
+  background-color: ${(props) => props.theme.colors.primary[900]};
+  display: flex;
+  justify-content: center;
+
   @media screen and (max-width: 800px) {
     height: 4.313rem;
   }
 
   .navbar {
     width: 100%;
-    padding: 0 9rem;
-    background-color: ${(props) => props.theme.colors.primary[900]};
+    max-width: 1200px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Metropolis', sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     color: #fff;
@@ -34,7 +37,7 @@ export const Container = styled.div`
       display: flex;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       padding: 0 1rem;
       flex-wrap: nowrap;
       display: flex;
@@ -107,8 +110,14 @@ export const Container = styled.div`
     }
   }
 
+  @media screen and (max-width: 1250px) {
+    .navbar {
+      padding: 0 1rem;
+    }
+  }
   @media screen and (max-width: 800px) {
     .navbar {
+      padding: 0 1rem;
       .nav-menu {
         display: none;
       }

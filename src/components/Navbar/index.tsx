@@ -52,16 +52,26 @@ export default function Navbar() {
               </div>
               <ul>
                 <li>
-                  <a href="#aboutUs">Quem Somos</a>
+                  <a href="#aboutUs" onClick={() => setisOpen(false)}>
+                    Quem Somos
+                  </a>
                 </li>
                 <li>
-                  <a href="#Products">Produtos</a>
+                  <a href="#Products" onClick={() => setisOpen(false)}>
+                    Produtos
+                  </a>
                 </li>
                 <li>
-                  <a href="#Team">Equipe</a>
+                  <a href="#Team" onClick={() => setisOpen(false)}>
+                    Equipe
+                  </a>
                 </li>
                 <li>
-                  <a className="contact" href="#Contact">
+                  <a
+                    className="contact"
+                    href="#Contact"
+                    onClick={() => setisOpen(false)}
+                  >
                     Fale conosco
                   </a>
                 </li>

@@ -1,23 +1,22 @@
-import {useSwiper} from 'swiper/react';
-import {TestimonialContainer} from './styles';
-import Testimonial from '@/assets/Imagens/testimonial.svg';
+import {useRef, useState, useEffect, useCallback} from 'react';
 import {BsArrowRightCircle, BsArrowLeftCircle} from 'react-icons/bs';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import quotation from '@/assets/Icons/quotation.svg';
+import Testimonial from '@/assets/Imagens/testimonial.svg';
+import {TestimonialContainer} from './styles';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import {Autoplay, Pagination, Navigation} from 'swiper';
 
-import quotation from '@/assets/Icons/quotation.svg';
-
-const Testemunho = [
+const People = [
   {
     id: 1,
     img: Testimonial,
     nome: 'Cláudio Mendes',
     cargo: 'CEO Casa do adubo',
     depoimento:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea nulla elementum amet donec posuere vitae orci. Tortor arcu amet accumsan risus hendrerit vestibulum quisque aenean. Sed habitant quam feugiat netus etiam. ',
   },
   {
     id: 2,
@@ -38,53 +37,99 @@ const Testemunho = [
 ];
 
 export default function testimonial() {
-  const swiper = useSwiper();
+  const [currentIndex, updateCurrentIndex] = useState(0);
+  const swiperRef = useRef() as any;
+
+  const goNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
+  const goPrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const updateIndex = useCallback(
+    () => updateCurrentIndex(swiperRef.current.swiper.realIndex),
+    [],
+  );
+
+  useEffect(() => {
+    const swiperInstance = swiperRef.current.swiper;
+
+    if (swiperInstance) {
+      swiperInstance.on('slideChange', updateIndex);
+    }
+
+    return () => {
+      if (swiperInstance) {
+        swiperInstance.off('slideChange', updateIndex);
+      }
+    };
+  }, [updateIndex]);
 
   return (
     <TestimonialContainer>
-      <div className="div-ParterTalkTop">
-        <span> DEPOIMENTOS</span>
-        <h2>Confira oque nossos parceiros estão falando</h2>
-      </div>
-      <div className="div-imgPeople">
-        <Swiper
-          spaceBetween={60}
-          centeredSlides={true}
-          // autoplay={{
-          //   delay: 5000,
-          //   disableOnInteraction: false,
-          // }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {Testemunho.map((testimonial) => (
-            <>
-              <SwiperSlide className="swiperSlide">
+      <div className="Testimonial">
+        <div className="div-ParterTalkTop">
+          <span> DEPOIMENTOS</span>
+          <h2>Confira o que nossos parceiros estão falando</h2>
+        </div>
+        <div>
+          <Swiper
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper.el;
+            }}
+            spaceBetween={60}
+            centeredSlides={true}
+            className="mySwiper swiper-container"
+          >
+            {People.map((Peoples) => (
+              <SwiperSlide key={Peoples.id}>
                 <div className="swiperSlideInfo">
-                  <img src={testimonial.img} alt={testimonial.nome} />
+                  <img src={Peoples.img} alt={Peoples.nome} />
                   <section>
-                    <span>{testimonial.nome}</span>
-                    <h4>{testimonial.cargo}</h4>
+                    <span>{Peoples.nome}</span>
+                    <h4>{Peoples.cargo}</h4>
                   </section>
                 </div>
                 <div className="swiperSliderDepoiment">
                   <img src={quotation} alt="quotation" />
                   <br></br>
-                  <span>{testimonial.depoimento}</span>
-                  <section>
-                    <div className="swiper-button-prev">
-                      <BsArrowLeftCircle size={30} />
-                    </div>
-                    <div>
-                      <button onClick={() => swiper.slideNext()}>teste</button>
-                    </div>
-                  </section>
+                  <span>{Peoples.depoimento}</span>
                 </div>
               </SwiperSlide>
-            </>
-          ))}
-        </Swiper>
+            ))}
+
+            <div className="div-Button" style={{cursor: 'pointer'}}>
+              <button
+                className="buttonPrev"
+                onClick={() => goPrev()}
+                style={
+                  currentIndex === 0
+                    ? {color: 'gray', cursor: 'not-allowed'}
+                    : {cursor: 'pointer'}
+                }
+              >
+                <BsArrowLeftCircle size={32} />
+              </button>
+              <button
+                onClick={() => goNext()}
+                className="buttonNext"
+                style={
+                  currentIndex === People.length - 1
+                    ? {color: 'gray', cursor: 'not-allowed'}
+                    : {cursor: 'pointer'}
+                }
+              >
+                <BsArrowRightCircle size={32} />
+              </button>
+            </div>
+          </Swiper>
+        </div>
       </div>
     </TestimonialContainer>
   );
