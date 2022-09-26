@@ -414,9 +414,13 @@ export const Products = styled.div`
     width: 100%;
     max-width: 1200px;
     .productList {
-      width: 40%;
+      width: 100%;
       font-size: ${(props) => props.theme.fontSize.large};
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
+      height: 480px;
+      overflow-x: hidden;
+      overflow-y: auto;
+
       .productText {
         display: flex;
         cursor: pointer;
@@ -553,6 +557,9 @@ export const Products = styled.div`
         width: 100%;
         font-size: ${(props) => props.theme.fontSize.large};
         font-weight: ${(props) => props.theme.fontWeight.semiBold};
+        height: 740px;
+        overflow-x: hidden;
+        overflow-y: auto;
         .productText {
           display: flex;
           cursor: pointer;

@@ -6,14 +6,12 @@ export default function team() {
     <ContactContainer>
       <div id="Contact" className="contactContainer">
         <div className="div-Contacts">
-          <span> CONTATO</span>
+          <span>FALE CONOSCO</span>
           <h2>Conta pra gente, como podemos ajudar seu negócio?</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ipsum
-            arcu sed nec rhoncus. Lorem velit proin suspendisse vestibulum, orci
-            orci eleifend. Diam euismod vulputate ac arcu nunc, malesuada libero
-            velit. Vel sed sed lobortis in congue. Amet sagittis lacus, auctor
-            netus volutpat dictum.
+            Fale Conosco! Tem alguma dúvida, sugestão ou crítica a fazer? Então
+            entre em contato conosco. Suas dúvidas serão esclarecidas e sua
+            opinião é fundamental para o nosso aperfeiçoamento.
           </p>
           <iframe
             className="googleMap"

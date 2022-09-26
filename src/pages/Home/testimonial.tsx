@@ -2,39 +2,11 @@ import {useRef, useState, useEffect, useCallback} from 'react';
 import {BsArrowRightCircle, BsArrowLeftCircle} from 'react-icons/bs';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import quotation from '@/assets/Icons/quotation.svg';
-import Testimonial from '@/assets/Imagens/testimonial.svg';
 import {TestimonialContainer} from './styles';
-
+import {People} from '@/utils/mock';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-const People = [
-  {
-    id: 1,
-    img: Testimonial,
-    nome: 'Cláudio Mendes',
-    cargo: 'CEO Casa do adubo',
-    depoimento:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea nulla elementum amet donec posuere vitae orci. Tortor arcu amet accumsan risus hendrerit vestibulum quisque aenean. Sed habitant quam feugiat netus etiam. ',
-  },
-  {
-    id: 2,
-    img: Testimonial,
-    nome: 'Breno',
-    cargo: 'CEO Casa do adubo',
-    depoimento:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus.',
-  },
-  {
-    id: 3,
-    img: Testimonial,
-    nome: 'Roberta',
-    cargo: 'CEO Casa do adubo',
-    depoimento:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus, consectetur adipiscing elit. Non ipsum arcu sed nec rhoncus.',
-  },
-];
 
 export default function testimonial() {
   const [currentIndex, updateCurrentIndex] = useState(0);
