@@ -176,6 +176,7 @@ export const PartnerContainer = styled.div`
     padding: 3.3rem 0 3.3rem 8.3rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     img {
       padding-right: 7.8rem;
     }
@@ -259,52 +260,75 @@ export const AboutUsContainer = styled.div`
     max-width: 1200px;
     width: 100%;
     display: flex;
+    flex-direction: column;
   }
   .div-info {
-    width: 50%;
-    padding: 6rem 0;
+    width: 100%;
+    padding: 6rem 0 0 0;
+    display: flex;
+    align-items: center;
+    .div-title {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      max-width: 543px;
+      margin-right: 11rem;
+    }
     span {
       font-size: ${(props) => props.theme.fontSize.medium};
       line-height: 16px;
       font-weight: 500;
       color: #3c3c3c;
+      width: 40%;
     }
     h2 {
       padding-top: 1rem;
       font-size: ${(props) => props.theme.fontSize.xxxlarge};
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
     }
-    .div-textMobile {
-      display: none;
-    }
-    .IconsAdvantage {
-      display: flex;
-      .Star {
-        float: left;
-        display: flex;
-        align-items: center;
-        margin-top: 10.875rem;
-        padding-right: 1.1rem;
-        border-right: #2c2c2c solid 1px;
-        img {
-          margin-right: 0.8rem;
-        }
-        span {
-          font-size: ${(props) => props.theme.fontSize.medium};
+    .mySwiper {
+      width: 40%;
+      top: 40%;
+      span {
+        font-size: ${(props) => props.theme.fontSize.large};
+        font-weight: ${(props) => props.theme.fontWeight.regular};
+        line-height: 24px;
+      }
+      .div-Button {
+        padding-top: 3.5rem;
+        button {
+          padding: 0 1rem 0 0;
         }
       }
-      .Like {
-        float: left;
-        display: flex;
-        align-items: center;
-        margin-top: 10.875rem;
-        padding-left: 1.8rem;
-        img {
-          margin-right: 0.8rem;
-        }
-        span {
-          font-size: ${(props) => props.theme.fontSize.medium};
-        }
+    }
+  }
+  .IconsAdvantage {
+    width: 100%;
+    display: flex;
+    margin: 7rem auto;
+    .Star {
+      float: left;
+      display: flex;
+      align-items: center;
+      padding-right: 1.1rem;
+      border-right: #2c2c2c solid 1px;
+      img {
+        margin-right: 0.8rem;
+      }
+      span {
+        font-size: ${(props) => props.theme.fontSize.medium};
+      }
+    }
+    .Like {
+      float: left;
+      display: flex;
+      align-items: center;
+      padding-left: 1.8rem;
+      img {
+        margin-right: 0.8rem;
+      }
+      span {
+        font-size: ${(props) => props.theme.fontSize.medium};
       }
     }
   }
@@ -340,6 +364,17 @@ export const AboutUsContainer = styled.div`
     .div-info {
       width: 100%;
       padding: 0 0;
+      display: flex;
+      flex-direction: column;
+      .div-title {
+        width: 100%;
+        margin-right: 0;
+        max-width: 100%;
+      }
+      .mySwiper {
+        width: 100%;
+        top: 0;
+      }
       h2 {
         font-size: ${(props) => props.theme.fontSize.xxlarge};
         padding-bottom: 2.5rem;
@@ -352,16 +387,18 @@ export const AboutUsContainer = styled.div`
         line-height: 24px;
         color: #3c3c3c;
       }
-      .IconsAdvantage {
-        flex-direction: column;
-        .Star {
-          margin-top: 2.5rem;
-          border: none;
-        }
-        .Like {
-          margin-top: 2rem;
-          padding-left: 0;
-        }
+    }
+    .IconsAdvantage {
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      .Star {
+        border: none;
+      }
+      .Like {
+        padding-left: 0;
+        margin-top: 2rem;
       }
     }
     .div-text {
@@ -934,16 +971,26 @@ export const ContactContainer = styled.div`
       color: #ffffff;
       max-width: 579px;
     }
-    p {
-      padding-top: 1.5rem;
-      padding-right: 6rem;
-      font-size: ${(props) => props.theme.fontSize.large};
-      line-height: 24px;
-      font-weight: ${(props) => props.theme.fontWeight.regular};
-      color: #ffffff;
+    div {
+      max-width: 256px;
+      p {
+        padding-top: 2rem;
+        font-size: ${(props) => props.theme.fontSize.large};
+        line-height: 24px;
+        font-weight: ${(props) => props.theme.fontWeight.regular};
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        a {
+          color: #ffffff;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+        }
+      }
     }
     .googleMap {
-      margin-top: 6rem;
+      margin-top: 2.6rem;
     }
   }
   .div-ContactForm {
@@ -971,12 +1018,11 @@ export const ContactContainer = styled.div`
     textarea {
       width: 100%;
       padding: 11px 10px 11px 15px;
-      gap: 10px;
       border: 1px solid #3c3c3c;
       border-radius: 5px;
       box-sizing: border-box;
       margin-top: 6px;
-      margin-bottom: 16px;
+      margin-bottom: 1.5rem;
       resize: vertical;
     }
 
@@ -1000,8 +1046,13 @@ export const ContactContainer = styled.div`
     .div-Contacts {
       width: 100%;
       padding-top: 0;
+      div {
+        width: 100%;
+      }
       .googleMap {
-        display: none;
+        width: 100%;
+        width: 100%;
+        display: block;
       }
       h2 {
         font-size: ${(props) => props.theme.fontSize.xxlarge};

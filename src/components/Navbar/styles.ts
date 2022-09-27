@@ -81,7 +81,7 @@ export const Container = styled.div`
         padding: 10px 0;
       }
     }
-    a {
+    .navMenu {
       color: #fff;
       text-decoration: none;
       padding-right: 3.5rem;
@@ -92,14 +92,17 @@ export const Container = styled.div`
     }
     .contact {
       color: #3cfca0;
-      font-family: ${(props) => props.theme.headings.heading5};
-      border-left: #fff 1px solid;
-      padding-left: 1.5rem;
       align-items: center;
       display: inline-flex;
+      background-color: #3cfca0;
+      color: black;
+      font-weight: ${(props) => props.theme.fontWeight.medium};
+      padding: 1rem;
+      cursor: pointer;
       .icon {
-        margin-left: 1rem;
+        margin-left: 1.3rem;
       }
+
       @media screen and (max-width: 800px) {
         display: flex;
         border: none;

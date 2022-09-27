@@ -6,12 +6,15 @@ export const Footer = styled.div`
   border-top: 2px solid #ffffff09;
   background: rgba(2, 53, 53, 0.9);
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   .Footer {
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
   }
   .div-FooterMenu {
     display: flex;
@@ -30,21 +33,10 @@ export const Footer = styled.div`
     }
   }
   .div-FooterLogo {
-    width: 50%;
+    width: 33%;
     flex-direction: column;
-    align-items: end;
     display: flex;
-    img {
-      padding-top: 1.5rem;
-    }
-    p {
-      padding-top: 2.25rem;
-      font-size: ${(props) => props.theme.fontSize.large};
-      font-weight: ${(props) => props.theme.fontWeight.regular};
-      line-height: 24px;
-      text-align: center;
-      color: #ffffff;
-    }
+    align-items: center;
   }
   .div-FooterRS {
     width: 33%;
@@ -61,26 +53,39 @@ export const Footer = styled.div`
   .FooterTextMobile {
     display: none;
   }
+  div {
+    p {
+      padding-top: 2.25rem;
+      font-size: ${(props) => props.theme.fontSize.large};
+      font-weight: ${(props) => props.theme.fontWeight.regular};
+      line-height: 24px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
   @media screen and (max-width: 1200px) {
     flex-direction: row;
     flex-wrap: wrap;
     .Footer {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
     }
     .div-FooterMenu {
-      width: 100%;
+      width: 33%;
       justify-content: center;
+      ul li a {
+        padding: 10px;
+      }
     }
     .div-FooterLogo {
-      width: 100%;
+      width: 33%;
       align-items: center;
       img {
-        width: 30%;
+        width: 50%;
       }
     }
     .div-FooterRS {
-      width: 50%;
+      width: 33%;
 
       .FooterRSLeft {
         margin-right: 3rem;
@@ -99,10 +104,28 @@ export const Footer = styled.div`
       color: #ffffff;
     }
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 900px) {
     .div-FooterMenu {
-      ul li a {
-        padding: 0 10px 0 0;
+      display: none;
+    }
+    .Footer {
+      .div-FooterLogo {
+        width: 50%;
+        align-items: flex-start;
+        img {
+          width: 50%;
+        }
+      }
+      .div-FooterRS {
+        width: 50%;
+        margin-top: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .Footer {
+      .div-FooterLogo img {
+        width: 100%;
       }
     }
   }

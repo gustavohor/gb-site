@@ -62,16 +62,16 @@ export default function testimonial() {
             {People.map((Peoples) => (
               <SwiperSlide key={Peoples.id}>
                 <div className="swiperSlideInfo">
-                  <img src={Peoples.img} alt={Peoples.nome} />
+                  <img src={Peoples.img} alt={Peoples.name} />
                   <section>
-                    <span>{Peoples.nome}</span>
-                    <h4>{Peoples.cargo}</h4>
+                    <span>{Peoples.name}</span>
+                    <h4>{Peoples.charge}</h4>
                   </section>
                 </div>
                 <div className="swiperSliderDepoiment">
                   <img src={quotation} alt="quotation" />
                   <br></br>
-                  <span>{Peoples.depoimento}</span>
+                  <span>{Peoples.testimonial}</span>
                 </div>
               </SwiperSlide>
             ))}

@@ -1,6 +1,6 @@
 import {TeamContainer} from './styles';
 import {AiFillCheckCircle} from 'react-icons/ai';
-import Mapa from '@/assets/Imagens/mapTeam.svg';
+import Mapa from '@/assets/Imagens/mapTeam.png';
 
 export default function team() {
   return (

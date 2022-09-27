@@ -22,6 +22,7 @@ export default function Navbar() {
           <ul>
             <li>
               <Link
+                className="navMenu"
                 to="aboutUs"
                 spy={true}
                 smooth={true}
@@ -33,6 +34,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                className="navMenu"
                 to="Products"
                 spy={true}
                 smooth={true}
@@ -44,6 +46,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                className="navMenu"
                 to="Team"
                 spy={true}
                 smooth={true}
