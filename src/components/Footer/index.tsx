@@ -52,7 +52,12 @@ export default function Navbar() {
           <img src={Logo} alt="Logo da empresa" />
         </div>
         <div className="div-FooterRS">
-          <FaLinkedinIn className="FooterRSRight" size={30} color={'#fff'} />
+          <a
+            href="https://www.linkedin.com/company/green-belti-tecnologia/"
+            target="_blank"
+          >
+            <FaLinkedinIn className="FooterRSRight" size={30} color={'#fff'} />
+          </a>
         </div>
       </div>
       <div>

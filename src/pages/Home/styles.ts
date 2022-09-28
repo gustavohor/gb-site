@@ -16,6 +16,11 @@ export const FirstContainer = styled.div`
   background: rgba(2, 53, 53, 0.9);
   align-items: center;
   justify-content: center;
+  .FirstContainer {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+  }
   .div-first-conteiner {
     width: 50%;
     float: left;
@@ -109,12 +114,20 @@ export const FirstContainer = styled.div`
     flex-direction: column;
     width: 100%;
     padding: 0 1rem !important;
+    .FirstContainer {
+      max-width: 100%;
+    }
     .div-first-conteiner {
       width: 100%;
       text-align: left;
       margin: 8.5rem 0 3.5rem 0;
       .title {
-        font-size: 36px;
+        font-size: 2.2rem;
+        width: 100%;
+        .bold-title {
+          font-size: 2.2rem;
+          width: 100%;
+        }
       }
       .description {
         margin: 0rem;
@@ -418,6 +431,52 @@ export const AboutUsContainer = styled.div`
     }
   }
 `;
+export const AboutUsMVVContainer = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  background-color: #f7f7f7;
+  margin: 3rem auto;
+  div {
+    max-width: 360px;
+    width: 33%;
+    display: flex;
+    margin-right: 1.5rem;
+    img {
+      width: 72px;
+      height: 72px;
+    }
+    section {
+      margin-left: 1.5rem;
+      h2 {
+        font-size: 18px;
+        font-weight: ${(props) => props.theme.fontWeight.semiBold};
+        color: #3c3c3c;
+        opacity: 0.87;
+        padding-bottom: 0.5rem;
+      }
+      span {
+        font-size: ${(props) => props.theme.fontSize.large};
+        font-weight: ${(props) => props.theme.fontWeight.regular};
+        line-height: 24px;
+        color: #3c3c3c;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    margin: 3rem 1rem;
+  }
+  @media screen and (max-width: 900px) {
+    margin: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    div {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+`;
 export const Products = styled.div`
   width: 100%;
   padding: 5rem 0;
@@ -425,24 +484,38 @@ export const Products = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  span {
+  .productHeader {
     display: flex;
-    justify-content: center;
-    font-size: ${(props) => props.theme.fontSize.large};
-    font-weight: ${(props) => props.theme.fontWeight.medium};
-    color: #fff;
-    margin-bottom: 1rem;
-    opacity: 0.6;
-  }
-  .productH2 {
-    display: flex;
-    justify-content: center;
-    font-size: ${(props) => props.theme.fontSize.xxxlarge};
-    font-weight: ${(props) => props.theme.fontWeight.semiBold};
-    color: #fff;
-    text-align: center;
-
-    line-height: 40px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    .productionSection {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      span {
+        display: flex;
+        font-size: ${(props) => props.theme.fontSize.large};
+        font-weight: ${(props) => props.theme.fontWeight.medium};
+        color: #fff;
+        margin-bottom: 1rem;
+        opacity: 0.6;
+      }
+      .productH2 {
+        display: flex;
+        font-size: ${(props) => props.theme.fontSize.xxxlarge};
+        font-weight: ${(props) => props.theme.fontWeight.semiBold};
+        color: #fff;
+        text-align: left;
+        line-height: 40px;
+        width: 420px;
+      }
+    }
+    section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
   }
   .productDesktop {
     margin-top: 5rem;
@@ -462,6 +535,8 @@ export const Products = styled.div`
         display: flex;
         cursor: pointer;
         align-items: center;
+        border-top: 1px rgb(255, 255, 255, 0.15) solid;
+        width: 442px;
         .Numbers {
           margin: 1.96rem 1.5rem;
         }
@@ -486,7 +561,7 @@ export const Products = styled.div`
         }
         .productDescription {
           align-self: center;
-          padding-right: 2.3rem;
+          width: 309px;
 
           h2 {
             color: #fff;
@@ -512,7 +587,7 @@ export const Products = styled.div`
         background: linear-gradient(
           90deg,
           rgba(60, 252, 160, 0.15) 65.74%,
-          rgba(60, 252, 160, 0) 101.31%
+          rgba(60, 252, 160, 0) 77.31%
         );
         border-left: 5px solid #3cfca0;
         .Numbers {
@@ -526,7 +601,7 @@ export const Products = styled.div`
         }
         .productDescription {
           align-self: center;
-          padding-right: 2.3rem;
+          width: 309px;
 
           h2 {
             color: #fff;
@@ -549,7 +624,7 @@ export const Products = styled.div`
     }
     .productInfo {
       display: flex;
-      margin-top: 3rem;
+      margin-top: 1.6rem;
 
       p {
         margin-left: 1.5rem;
@@ -561,9 +636,12 @@ export const Products = styled.div`
       }
     }
     .productScreen {
-      width: 60%;
+      width: 100%;
       display: flex;
       flex-direction: column;
+      .screen {
+        width: 100%;
+      }
       .productList {
         width: 100%;
       }
@@ -577,6 +655,23 @@ export const Products = styled.div`
   }
   @media screen and (max-width: 900px) {
     padding: 3.5rem 1rem 3.5rem 1rem;
+    .productHeader {
+      flex-direction: column;
+      align-items: center;
+      .productionSection {
+        align-items: center;
+        .productH2 {
+          text-align: center;
+          margin-bottom: 1.6rem;
+          width: 100%;
+        }
+      }
+      section {
+        img {
+          width: 48%;
+        }
+      }
+    }
     .productH2 {
       text-align: center;
       font-size: 22px;
@@ -594,9 +689,6 @@ export const Products = styled.div`
         width: 100%;
         font-size: ${(props) => props.theme.fontSize.large};
         font-weight: ${(props) => props.theme.fontWeight.semiBold};
-        height: 740px;
-        overflow-x: hidden;
-        overflow-y: auto;
         .productText {
           display: flex;
           cursor: pointer;
@@ -723,7 +815,7 @@ export const TeamContainer = styled.div`
       padding-top: 1rem;
       font-size: ${(props) => props.theme.fontSize.xxxlarge};
       font-weight: ${(props) => props.theme.fontWeight.semiBold};
-      padding-bottom: 5.1rem;
+      padding-bottom: 3.6rem;
       line-height: 40px;
     }
     .check {

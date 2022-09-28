@@ -1,9 +1,9 @@
 import {useRef, useState, useEffect, useCallback} from 'react';
-import {AboutUsContainer} from './styles';
+import {AboutUsContainer, AboutUsMVVContainer} from './styles';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {BsArrowRightCircle, BsArrowLeftCircle} from 'react-icons/bs';
 import {Autoplay} from 'swiper';
-import {aboutUsText} from '@/utils/mock';
+import {aboutUsText, aboutUsMVV} from '@/utils/mock';
 import Star from '@/assets/Icons/Star.svg';
 import Like from '@/assets/Icons/Like.svg';
 import 'swiper/css';
@@ -45,76 +45,89 @@ export default function aboutUs() {
     };
   }, [updateIndex]);
   return (
-    <AboutUsContainer>
-      <div className="topAboutUs">
-        <div className="div-info">
-          <div className="div-title">
-            <span>QUEM SOMOS</span>
-            <h2>
-              Parceiros para transformar seu negócio em algo mais funcional
-            </h2>
-          </div>
-          <Swiper
-            onBeforeInit={(swiper) => {
-              swiperRef.current = swiper.el;
-            }}
-            spaceBetween={60}
-            centeredSlides={true}
-            className="mySwiper"
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay]}
-          >
-            {aboutUsText.map((item) => (
-              <SwiperSlide key={item.id}>
-                <span>{item.text}</span>
-              </SwiperSlide>
-            ))}
-            <div className="div-Button" style={{cursor: 'pointer'}}>
-              <button
-                className="buttonPrev"
-                onClick={() => goPrev()}
-                style={
-                  currentIndex === 0
-                    ? {color: 'gray', cursor: 'not-allowed'}
-                    : {cursor: 'pointer'}
-                }
-              >
-                <BsArrowLeftCircle size={32} />
-              </button>
-              <button
-                onClick={() => goNext()}
-                className="buttonNext"
-                style={
-                  currentIndex === aboutUsText.length - 1
-                    ? {color: 'gray', cursor: 'not-allowed'}
-                    : {cursor: 'pointer'}
-                }
-              >
-                <BsArrowRightCircle size={32} />
-              </button>
+    <>
+      <AboutUsContainer>
+        <div className="topAboutUs">
+          <div className="div-info">
+            <div className="div-title">
+              <span>QUEM SOMOS</span>
+              <h2>
+                Parceiros para transformar seu negócio em algo mais funcional
+              </h2>
             </div>
-          </Swiper>
-        </div>
-        <div className="IconsAdvantage">
-          <div className="Star">
-            <img src={Star} alt="Estrelas" />
-            <span>
-              Qualidade nas entregas <br></br>
-              <b>Produtos detalhistas</b>
-            </span>
+            <Swiper
+              onBeforeInit={(swiper) => {
+                swiperRef.current = swiper.el;
+              }}
+              spaceBetween={60}
+              centeredSlides={true}
+              className="mySwiper"
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+            >
+              {aboutUsText.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <span>{item.text}</span>
+                </SwiperSlide>
+              ))}
+              <div className="div-Button" style={{cursor: 'pointer'}}>
+                <button
+                  className="buttonPrev"
+                  onClick={() => goPrev()}
+                  style={
+                    currentIndex === 0
+                      ? {color: 'gray', cursor: 'not-allowed'}
+                      : {cursor: 'pointer'}
+                  }
+                >
+                  <BsArrowLeftCircle size={32} />
+                </button>
+                <button
+                  onClick={() => goNext()}
+                  className="buttonNext"
+                  style={
+                    currentIndex === aboutUsText.length - 1
+                      ? {color: 'gray', cursor: 'not-allowed'}
+                      : {cursor: 'pointer'}
+                  }
+                >
+                  <BsArrowRightCircle size={32} />
+                </button>
+              </div>
+            </Swiper>
           </div>
-          <div className="Like">
-            <img src={Like} alt="Estrelas" />
-            <span>
-              Satisfação dos clientes <br></br>
-              <b>98%</b>
-            </span>
+          <div className="IconsAdvantage">
+            <div className="Star">
+              <img src={Star} alt="Estrelas" />
+              <span>
+                Qualidade nas entregas <br></br>
+                <b>Produtos detalhistas</b>
+              </span>
+            </div>
+            <div className="Like">
+              <img src={Like} alt="Estrelas" />
+              <span>
+                Satisfação dos clientes <br></br>
+                <b>98%</b>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-    </AboutUsContainer>
+      </AboutUsContainer>
+      <AboutUsMVVContainer>
+        {aboutUsMVV.map((item) => (
+          <div key={item.id}>
+            <img src={item.img} alt={item.title} />
+            <section>
+              <h2>{item.title}</h2>
+              <span>{item.text}</span>
+            </section>
+          </div>
+        ))}
+      </AboutUsMVVContainer>
+    </>
   );
 }

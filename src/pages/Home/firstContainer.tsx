@@ -7,7 +7,7 @@ import {FirstContainer} from './styles';
 export default function firstContainer() {
   return (
     <FirstContainer>
-      <div style={{maxWidth: '1200px', width: '100%', display: 'flex'}}>
+      <div className="FirstContainer">
         <div className="div-first-conteiner">
           <span className="quality">
             <IoMdSquare className="rectangle" size={15} /> Qualidade
