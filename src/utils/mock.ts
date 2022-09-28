@@ -1,12 +1,12 @@
 import screen from '@/assets/Imagens/DesktopMobileRDV.png';
 import screen2 from '@/assets/Imagens/DesktopMobileCRM.png';
-import screen3 from '@/assets/Imagens/DesktopMobileGEM.png';
+import screen3 from '@/assets/Imagens/DesktopMobileME.png';
 import screen4 from '@/assets/Imagens/DesktopMobileFV.png';
 
 export const Sliders = [
   {
     id: '01',
-    title: 'Gestão de Despesa',
+    title: 'Gestão de despesa',
     subTitle: 'Tenha o controle de todo o seu negócio em um só lugar',
     img: screen,
     imgDescrition:
@@ -15,23 +15,25 @@ export const Sliders = [
   {
     id: '02',
     title: 'CRM',
-    subTitle: 'Tenha o controle de todo o seu negócio em um só lugar',
+    subTitle:
+      'Tenha o controle de todos os seus cliente e potenciais em um só lugar',
     img: screen2,
     imgDescrition:
       'O CRM é um sistema aonde armazena informações de clientes atuais e potenciais nome, endereço, número de telefone, e suas atividades e pontos de contato com a empresa, incluindo visitas a sites, ligações telefônicas, e-mails, entre outras interações.',
   },
   {
     id: '03',
-    title: 'Gestão de Entrega de Mercadorias',
-    subTitle: 'Tenha o controle de todo o seu negócio em um só lugar',
+    title: 'Mapa de entrega',
+    subTitle: 'Tenha todo o controle de entrega de mercadorias em um só lugar',
     img: screen3,
     imgDescrition:
       ' O Mapa de Entrega é um sistema de gestão que auxilia na administração de entrega de mercadorias do seu negócio. A ferramenta cuida de todas entregas para os cliente, e tendo como gerir a frota através do mesmo.',
   },
   {
     id: '04',
-    title: 'Força de Vendas',
-    subTitle: 'Tenha o controle de todo o seu negócio em um só lugar',
+    title: 'Força de vendas',
+    subTitle:
+      'Tenha um aplicativo para realizar venda externa comunicando com a loja',
     img: screen4,
     imgDescrition:
       'O força de vendas é um sistema que auxilia o usuário realização de uma venda. A ferramenta tem como objetivo a realização da venda fora da unidade física, podendo ser residência do cliente, dando mais conforto, praticidade e estreitando a comunicação com o nosso cliente final.',
@@ -48,7 +50,7 @@ export const People = [
     name: 'Raphael Covre',
     charge: 'CEO Casa do adubo',
     testimonial:
-      'A Greenbelt sempre foi uma empresa parceira da Casa do Adubo. Com eles conseguimos crescer exponencialmente! ',
+      'A Green Belt sempre foi uma empresa parceira da Casa do Adubo. Com eles conseguimos crescer exponencialmente! ',
   },
   {
     id: 2,
@@ -56,7 +58,7 @@ export const People = [
     name: 'Estevan Bento',
     charge: 'Diretor Casal',
     testimonial:
-      'A Greeenbelt fez toda diferença na gestão da Casal Distribuidora, avançamos muito com eles!',
+      'A Green Belt fez toda diferença na gestão da Casal Distribuidora, avançamos muito com eles!',
   },
 ];
 

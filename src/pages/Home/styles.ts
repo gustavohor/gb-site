@@ -363,6 +363,14 @@ export const AboutUsContainer = styled.div`
       display: none;
     }
   }
+  .div-Button {
+    .buttonPrev {
+      background-color: transparent;
+    }
+    .buttonNext {
+      background-color: transparent;
+    }
+  }
   @media screen and (max-width: 1300px) {
     padding: 2rem 1rem !important;
   }
@@ -695,6 +703,7 @@ export const Products = styled.div`
           margin: 0.5rem 0;
           align-items: center;
           border-top: 1px rgb(255, 255, 255, 0.15) solid;
+          padding: 1rem 0;
           .Numbers {
             margin: 1.96rem 1.5rem;
           }
@@ -718,7 +727,6 @@ export const Products = styled.div`
           }
           .productDescription {
             align-self: center;
-            padding-right: 2.3rem;
 
             h2 {
               color: #fff;
@@ -824,7 +832,6 @@ export const TeamContainer = styled.div`
       align-items: center;
       font-size: 18px;
       opacity: 1;
-      color: #191a15;
       font-weight: ${(props) => props.theme.fontWeight.medium};
     }
   }
@@ -991,6 +998,7 @@ export const TestimonialContainer = styled.div`
       padding: 3.5rem 1rem 0 1rem;
       .prevSwiper {
         margin-bottom: 0;
+        position: unset !important;
       }
       .swiper-slide.swiper-slide-active {
         display: flex;
@@ -1003,28 +1011,40 @@ export const TestimonialContainer = styled.div`
       }
       .swiperSlideInfo {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        section {
+          align-items: flex-start;
+        }
         img {
-          width: auto;
+          width: 30%;
         }
       }
       .swiperSliderDepoiment {
         width: 100%;
-        img {
-          margin-left: 0;
-        }
-        span {
-          margin-left: 0;
-          font-size: ${(props) => props.theme.fontSize.large};
-        }
       }
       .div-Button {
-        position: unset;
-        width: 100%;
-        justify-content: center;
-        top: 0;
+        position: unset !important;
       }
     }
+    .swiperSliderDepoiment {
+      width: 100%;
+      img {
+        margin-left: 0;
+      }
+      span {
+        margin-left: 0;
+        font-size: ${(props) => props.theme.fontSize.large};
+      }
+    }
+    .div-Button {
+      position: unset;
+      width: 100%;
+      justify-content: center;
+      top: 0;
+    }
   }
+
   @media screen and (max-width: 400px) {
     .swiperSlideInfo {
       img {

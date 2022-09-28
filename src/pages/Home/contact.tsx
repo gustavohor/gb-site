@@ -44,7 +44,8 @@ export default function team() {
                 size={30}
                 style={{color: '#fff', marginRight: '1rem '}}
               />{' '}
-              R. Antonio Leandro Da Silva, 60 - Alto Lage, Cariacica - ES
+              R. Antonio Leandro Da Silva, 60 - Alto Lage 29151-035, Cariacica -
+              ES
             </p>
           </div>
           <br />
@@ -59,8 +60,8 @@ export default function team() {
         <div className="div-ContactForm">
           <h2>Fale conosco</h2>
           <p>
-            lorem ipsum amenot dorem velit netus lorem ipsum amenot dorem velit
-            netus
+            Precisando de uma equipe para um novo projeto? Nos conte um pouco
+            mais...
           </p>
           <form action="onSubmit">
             <label htmlFor="name">Seu nome*</label>

@@ -3,6 +3,7 @@ import Banner from '@/assets/Imagens/bannerTop.png';
 import {CgArrowLongRight} from 'react-icons/cg';
 import {IoMdSquare} from 'react-icons/io';
 import {FirstContainer} from './styles';
+import Typed from 'react-typed';
 
 export default function firstContainer() {
   return (
@@ -14,7 +15,20 @@ export default function firstContainer() {
           </span>
           <h1 className="title">
             Entregamos produtos com<br></br>
-            <b className="bold-title"> experiências autênticas</b>
+            <b className="bold-title">
+              {' '}
+              <Typed
+                strings={[
+                  'experiências autênticas.',
+                  'código limpo e escalável',
+                  'usabilidade planejada',
+                  'foco nos resultados',
+                ]}
+                typeSpeed={90}
+                backSpeed={30}
+                loop
+              />
+            </b>
           </h1>
           <span className="description">
             Desenvolvemos nossos produtos centrados no usuário, buscando sempre

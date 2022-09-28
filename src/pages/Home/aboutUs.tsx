@@ -63,7 +63,7 @@ export default function aboutUs() {
               centeredSlides={true}
               className="mySwiper"
               autoplay={{
-                delay: 5000,
+                delay: 8000,
                 disableOnInteraction: false,
               }}
               modules={[Autoplay]}
