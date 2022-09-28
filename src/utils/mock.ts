@@ -65,7 +65,7 @@ export const People = [
 export const aboutUsText = [
   {
     id: 1,
-    text: 'Desde 2014, a Greenbelt Tecnologia disponibiliza soluções para infraestrutura e segurança tecnológica de acordo com cada negócio, alinhando alta performance com o melhor custo benefício. O nosso sucesso é comprovado pelos mais de 250 projetos entregues, nos quais reduzimos custos operacionais, aumentamos a produtividade e impulsionamos a receita de empresas de diversos tamanhos e segmentos.',
+    text: 'Desde 2014, a Green Belt Tecnologia disponibiliza soluções para infraestrutura e segurança tecnológica de acordo com cada negócio, alinhando alta performance com o melhor custo benefício. O nosso sucesso é comprovado pelos mais de 250 projetos entregues, nos quais reduzimos custos operacionais, aumentamos a produtividade e impulsionamos a receita de empresas de diversos tamanhos e segmentos.',
   },
   {
     id: 2,
@@ -73,7 +73,7 @@ export const aboutUsText = [
   },
   {
     id: 3,
-    text: 'A Greenbelt é uma empresa que olha para o futuro: isso significa que pensamos nos percalços que podem ocorrer e sempre preparamos estratégias para imprevistos, trabalhando de forma proativa para que problemas não aconteçam. Levamos essa postura para a nossa atuação junto aos clientes, pois acreditamos que o sucesso deles também é nosso.',
+    text: 'A Green Belt é uma empresa que olha para o futuro: isso significa que pensamos nos percalços que podem ocorrer e sempre preparamos estratégias para imprevistos, trabalhando de forma proativa para que problemas não aconteçam. Levamos essa postura para a nossa atuação junto aos clientes, pois acreditamos que o sucesso deles também é nosso.',
   },
 ];
 

@@ -443,7 +443,7 @@ export const AboutUsMVVContainer = styled.div`
   max-width: 1200px;
   width: 100%;
   display: flex;
-  background-color: #f7f7f7;
+  background-color: #fcfcfc;
   margin: 3rem auto;
   div {
     max-width: 360px;
