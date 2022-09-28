@@ -7,7 +7,8 @@ export const Sliders = [
   {
     id: '01',
     title: 'Gestão de despesa',
-    subTitle: 'Tenha o controle de todo o seu negócio em um só lugar',
+    subTitle:
+      'Tenha o controle das despedas de todo o seu negócio em um só lugar',
     img: screen,
     imgDescrition:
       'O RDV (Registro de Despesa de Viagem) é um sistema de gestão que auxilia na administração de despesas do seu negócio. A ferramenta cuida de todas as despesas relacionadas gastos do seu funcionário, permitindo que você tenha mais controle dos gastos.',
