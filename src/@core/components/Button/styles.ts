@@ -58,10 +58,10 @@ export const Container = styled.button<IBtnContainerProps>`
         if (props.color === btnColors.WARN) {
           return `
             color: #fff;
-            background-color: ${props.theme.colors.feedBack.alert};
+            background-color: ${props.theme.colors.feedBack.warn};
             box-shadow: ${
               props.shadow
-                ? `0px 0px 15px 0px ${props.theme.colors.feedBack.alert};`
+                ? `0px 0px 15px 0px ${props.theme.colors.feedBack.warn};`
                 : 'none;'
             }
 
@@ -73,10 +73,10 @@ export const Container = styled.button<IBtnContainerProps>`
         if (props.color === btnColors.ERROR) {
           return `
             color: #fff;
-            background-color: ${props.theme.colors.feedBack.alertDark};
+            background-color: ${props.theme.colors.feedBack.error};
             box-shadow: ${
               props.shadow
-                ? `0px 0px 15px 0px ${props.theme.colors.feedBack.alertDark};`
+                ? `0px 0px 15px 0px ${props.theme.colors.feedBack.error};`
                 : 'none;'
             }
 
@@ -116,16 +116,16 @@ export const Container = styled.button<IBtnContainerProps>`
       case btnVariants.OUTLINE:
         if (props.color === btnColors.WARN) {
           return `
-            color: ${props.theme.colors.feedBack.alert};
+            color: ${props.theme.colors.feedBack.warn};
             background: none;
-            border: 2px solid ${props.theme.colors.feedBack.alert};
+            border: 2px solid ${props.theme.colors.feedBack.warn};
             box-shadow: ${
               props.shadow
-                ? `0px 0px 15px 0px ${props.theme.colors.feedBack.alert};`
+                ? `0px 0px 15px 0px ${props.theme.colors.feedBack.warn};`
                 : 'none;'
             }
             &:hover {
-              background-color: ${props.theme.colors.feedBack.alert};
+              background-color: ${props.theme.colors.feedBack.warn};
               color: #fff;
             }
           `;
@@ -149,17 +149,17 @@ export const Container = styled.button<IBtnContainerProps>`
         }
         if (props.color === btnColors.ERROR) {
           return `
-            color: ${props.theme.colors.feedBack.alertDark};
+            color: ${props.theme.colors.feedBack.error};
             background: none;
-            border: 2px solid ${props.theme.colors.feedBack.alertDark};
+            border: 2px solid ${props.theme.colors.feedBack.error};
             box-shadow: ${
               props.shadow
-                ? `0px 0px 15px 0px ${props.theme.colors.feedBack.alertDark};`
+                ? `0px 0px 15px 0px ${props.theme.colors.feedBack.error};`
                 : 'none;'
             }
 
             &:hover {
-              background-color: ${props.theme.colors.feedBack.alertDark};
+              background-color: ${props.theme.colors.feedBack.error};
               color: #fff;
             }
           `;
