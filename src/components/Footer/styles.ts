@@ -22,12 +22,18 @@ export const Footer = styled.div`
     padding: 1.5rem 0;
     ul {
       display: flex;
+
+      span {
+        color: #fff;
+        cursor: pointer;
+      }
       li {
+        padding-right: 10px;
         list-style-type: none;
         a {
-          padding: 20px;
           text-decoration: none;
           color: #fff;
+          cursor: pointer;
         }
       }
     }

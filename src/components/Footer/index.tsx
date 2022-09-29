@@ -1,10 +1,16 @@
 import {Footer} from './styles';
 import {FaLinkedinIn} from 'react-icons/fa';
 import {Link} from 'react-scroll';
-
+import {useDisclosure} from 'react-use-disclosure';
+import {ModalForm} from '@/components/Modal/form';
 import Logo from '../../assets/logo-gb.svg';
 
 export default function Navbar() {
+  const {
+    isOpen: isOpenForm,
+    toggle: toggleForm,
+    close: closeModalForm,
+  } = useDisclosure();
   return (
     <Footer>
       <div className="Footer">
@@ -46,6 +52,9 @@ export default function Navbar() {
                 Equipe
               </Link>
             </li>
+            <span className="work" onClick={toggleForm}>
+              Trabalhe conosco
+            </span>
           </ul>
         </div>
         <div className="div-FooterLogo">
@@ -65,6 +74,7 @@ export default function Navbar() {
           Green Belt LTDA. Todos os direitos reservados 2014
         </p>
       </div>
+      <ModalForm isOpen={isOpenForm} toggle={closeModalForm} />
     </Footer>
   );
 }

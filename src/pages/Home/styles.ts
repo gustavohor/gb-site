@@ -907,7 +907,6 @@ export const TestimonialContainer = styled.div`
       line-height: 40px;
       text-align: center;
       margin-bottom: 2.1rem;
-      max-width: 552px;
     }
   }
   .swiper-slide.swiper-slide-active {
