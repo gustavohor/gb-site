@@ -62,7 +62,7 @@ export default function Navbar() {
       </div>
       <div>
         <p className="FooterText">
-          Greenbelt LTDA. Todos os direitos reservados 2022
+          Green Belt LTDA. Todos os direitos reservados 2014
         </p>
       </div>
     </Footer>
