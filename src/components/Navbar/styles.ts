@@ -155,6 +155,15 @@ export const Container = styled.div`
         }
         ul {
           margin-top: 40px;
+          .work {
+            text-decoration: none;
+            color: #ffff;
+            display: flex;
+            padding: 10px 20px;
+            font-size: ${(props) => props.theme.fontSize.xxlarge};
+            font-weight: ${(props) => props.theme.fontWeight.light};
+            margin-bottom: 4rem;
+          }
           li {
             list-style: none;
             a {

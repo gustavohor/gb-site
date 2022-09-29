@@ -70,7 +70,10 @@ export const FirstContainer = styled.div`
         background-color: #023535;
         color: #fff;
       }
-
+      .contact {
+        display: flex;
+        align-items: center;
+      }
       .ArrowRight {
         margin-left: 11rem;
         background-color: #023535;
@@ -940,6 +943,11 @@ export const TestimonialContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: 70%;
+    .quotation {
+      width: 60%;
+      display: flex;
+      justify-content: flex-end;
+    }
     img {
       margin-left: 2.1rem;
     }
@@ -956,7 +964,7 @@ export const TestimonialContainer = styled.div`
     top: -170px;
     z-index: 999;
     justify-content: flex-end;
-    width: 46%;
+    width: 42%;
     .buttonPrev {
       background-color: transparent;
     }
@@ -980,12 +988,18 @@ export const TestimonialContainer = styled.div`
         }
       }
       .swiperSliderDepoiment {
-        width: 70%;
+        width: 100%;
         margin: 2rem 0 2rem 0;
+        .quotation {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          margin-top: -1rem;
+        }
       }
       .div-Button {
         position: relative;
-        width: 84%;
+        width: 66%;
         justify-content: center;
         top: -270px;
         margin-top: 3rem;
@@ -1015,26 +1029,35 @@ export const TestimonialContainer = styled.div`
         flex-direction: row;
         section {
           align-items: flex-start;
+          h4 {
+            text-align: left !important;
+          }
         }
         img {
           width: 30%;
+          margin-right: 1rem;
         }
       }
       .swiperSliderDepoiment {
         width: 100%;
+        .quotation {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 0;
+        }
+        img {
+          margin-left: 0;
+        }
+        span {
+          margin-left: 2rem;
+        }
       }
       .div-Button {
         position: unset !important;
-      }
-    }
-    .swiperSliderDepoiment {
-      width: 100%;
-      img {
-        margin-left: 0;
-      }
-      span {
-        margin-left: 0;
-        font-size: ${(props) => props.theme.fontSize.large};
+        width: 100%;
+        justify-content: left;
+        margin-left: 1rem;
       }
     }
     .div-Button {
@@ -1084,7 +1107,6 @@ export const ContactContainer = styled.div`
       max-width: 579px;
     }
     div {
-      max-width: 256px;
       p {
         padding-top: 2rem;
         font-size: ${(props) => props.theme.fontSize.large};

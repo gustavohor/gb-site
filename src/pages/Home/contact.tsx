@@ -8,14 +8,12 @@ export default function team() {
         <div className="div-Contacts">
           <span>FALE CONOSCO</span>
           <h2>Conta pra gente, como podemos ajudar seu negócio?</h2>
-          {/* <p>
-            Fale Conosco! Tem alguma dúvida, sugestão ou crítica a fazer? Então
-            entre em contato conosco. Suas dúvidas serão esclarecidas e sua
-            opinião é fundamental para o nosso aperfeiçoamento.
-          </p> */}
           <div>
             <p>
-              <a href="mailto:contato@greenbelt.com">
+              <a
+                href="mailto:contato@greenbelt.com"
+                style={{maxWidth: '256px'}}
+              >
                 <FiMail
                   size={30}
                   style={{color: '#fff', marginRight: '1rem '}}
@@ -24,25 +22,22 @@ export default function team() {
               </a>
             </p>
             <p>
-              <a href="tel:(11)12345-6578">
+              <a href="tel:(27)99928-2654" style={{maxWidth: '256px'}}>
                 <FiPhone
                   size={30}
                   style={{color: '#fff', marginRight: '1rem '}}
                 />{' '}
-                (11) 12345-6578
+                (27) 99928-2654
               </a>
             </p>
-            <p>
-              <FiClock
-                size={30}
-                style={{color: '#fff', marginRight: '1rem '}}
-              />{' '}
+            <p style={{maxWidth: '260px'}}>
+              <FiClock size={40} style={{color: '#fff', marginRight: '1rem'}} />{' '}
               Seg a Sex de 08h as 18h / sab de 08h as 12h
             </p>
-            <p>
+            <p style={{maxWidth: '360px'}}>
               <FiMapPin
-                size={30}
-                style={{color: '#fff', marginRight: '1rem '}}
+                size={40}
+                style={{color: '#fff', marginRight: '1rem'}}
               />{' '}
               R. Antonio Leandro Da Silva, 60 - Alto Lage 29151-035, Cariacica -
               ES

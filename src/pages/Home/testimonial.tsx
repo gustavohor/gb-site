@@ -2,6 +2,7 @@ import {useRef, useState, useEffect, useCallback} from 'react';
 import {BsArrowRightCircle, BsArrowLeftCircle} from 'react-icons/bs';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import quotation from '@/assets/Icons/quotation.svg';
+import quotationInv from '@/assets/Icons/quotationI.svg';
 import {TestimonialContainer} from './styles';
 import {People} from '@/utils/mock';
 import 'swiper/css';
@@ -69,9 +70,12 @@ export default function testimonial() {
                   </section>
                 </div>
                 <div className="swiperSliderDepoiment">
-                  <img src={quotation} alt="quotation" />
+                  <img src={quotation} alt="aspas" />
                   <br></br>
                   <span>{Peoples.testimonial}</span>
+                  <section className="quotation">
+                    <img src={quotationInv} alt="aspas" />
+                  </section>
                 </div>
               </SwiperSlide>
             ))}

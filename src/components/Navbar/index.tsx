@@ -5,9 +5,16 @@ import {Container} from './styles';
 import Menu from '@/assets/Icons/Menu.svg';
 import {HiOutlineX} from 'react-icons/hi';
 import {Link} from 'react-scroll';
+import {useDisclosure} from 'react-use-disclosure';
+import {ModalForm} from '@/components/Modal/form';
 
 export default function Navbar() {
-  const [isOpen, setisOpen] = useState(false);
+  const [isOpenMenu, setisOpenMenu] = useState(false);
+  const {
+    isOpen: isOpenForm,
+    toggle: toggleForm,
+    close: closeModalForm,
+  } = useDisclosure();
   return (
     <Container>
       <nav className="navbar">
@@ -16,7 +23,11 @@ export default function Navbar() {
           <img src={Logo} alt="Logo" />
         </div>
         <div className="menuMobile">
-          <img src={Menu} onClick={() => setisOpen(!isOpen)} alt="Menu" />
+          <img
+            src={Menu}
+            onClick={() => setisOpenMenu(!isOpenMenu)}
+            alt="Menu"
+          />
         </div>
         <div className="nav-menu">
           <ul>
@@ -26,7 +37,7 @@ export default function Navbar() {
                 to="aboutUs"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={0}
                 duration={500}
               >
                 Quem Somos
@@ -38,7 +49,7 @@ export default function Navbar() {
                 to="Products"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={-30}
                 duration={500}
               >
                 Produtos
@@ -50,19 +61,22 @@ export default function Navbar() {
                 to="Team"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={-100}
                 duration={500}
               >
                 Equipe
               </Link>
             </li>
+            <span className="navMenu" onClick={toggleForm}>
+              Trabalhe conosco
+            </span>
             <li>
               <Link
                 className="contact"
                 to="Contact"
                 spy={true}
                 smooth={true}
-                offset={50}
+                offset={-100}
                 duration={500}
               >
                 Fale conosco <CgArrowLongRight className="icon" size={25} />
@@ -70,7 +84,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        {isOpen && (
+        {isOpenMenu && (
           <>
             <div className="Mobile">
               <div className="MobileHeader">
@@ -81,7 +95,7 @@ export default function Navbar() {
                   <HiOutlineX
                     size={35}
                     className="mobileCross"
-                    onClick={() => setisOpen(!isOpen)}
+                    onClick={() => setisOpenMenu(!isOpenMenu)}
                   />
                 </div>
               </div>
@@ -91,9 +105,9 @@ export default function Navbar() {
                     to="aboutUs"
                     spy={true}
                     smooth={true}
-                    offset={50}
+                    offset={-100}
                     duration={500}
-                    onClick={() => setisOpen(false)}
+                    onClick={() => setisOpenMenu(false)}
                   >
                     Quem Somos
                   </Link>
@@ -103,34 +117,37 @@ export default function Navbar() {
                     to="Products"
                     spy={true}
                     smooth={true}
-                    offset={50}
+                    offset={-60}
                     duration={500}
-                    onClick={() => setisOpen(false)}
+                    onClick={() => setisOpenMenu(false)}
                   >
                     Produtos
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="Products"
+                    to="Team"
                     spy={true}
                     smooth={true}
-                    offset={50}
+                    offset={-100}
                     duration={500}
-                    onClick={() => setisOpen(false)}
+                    onClick={() => setisOpenMenu(false)}
                   >
                     Equipe
                   </Link>
                 </li>
+                <span className="work" onClick={toggleForm}>
+                  Trabalhe conosco
+                </span>
                 <li>
                   <Link
                     className="contact"
                     to="Contact"
                     spy={true}
                     smooth={true}
-                    offset={50}
+                    offset={-100}
                     duration={500}
-                    onClick={() => setisOpen(false)}
+                    onClick={() => setisOpenMenu(false)}
                   >
                     Fale conosco
                   </Link>
@@ -140,6 +157,7 @@ export default function Navbar() {
           </>
         )}
       </nav>
+      <ModalForm isOpen={isOpenForm} toggle={closeModalForm} />
     </Container>
   );
 }

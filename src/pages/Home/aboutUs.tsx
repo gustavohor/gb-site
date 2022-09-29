@@ -47,7 +47,7 @@ export default function aboutUs() {
   return (
     <>
       <AboutUsContainer>
-        <div className="topAboutUs">
+        <div className="topAboutUs" id="aboutUs">
           <div className="div-info">
             <div className="div-title">
               <span>QUEM SOMOS</span>

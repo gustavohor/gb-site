@@ -1,7 +1,7 @@
 export const theme = {
   colors: {
     background: '#fff',
-    text: '#121212',
+    text: '#3C3C3C',
     primary: {
       900: '#023535',
       700: '#01595880',
@@ -15,10 +15,11 @@ export const theme = {
     },
     primaryGreenBelt: '#3CFCA0',
     feedBack: {
-      success: '#008f8c',
-      greenDark: '#023535',
-      alert: '#F3B200',
-      alertDark: '#ED1C24',
+      success: '#50b4ac',
+      primary: '#023535',
+      warn: '#F3B200',
+      error: '#ED1C24',
+      info: '#50b4ac',
     },
     graysScale: {
       dark: '#000000',
@@ -121,17 +122,24 @@ export const theme = {
     96: '24rem', // 384px
   },
   sizes: {
-    navbarHeight: '5rem',
-    navbarHeightMobile: '15rem',
+    navbarHeight: '80px',
+    sidebarWidth: '310px',
   },
-};
-theme;
-
-export const elementsIndex = {
-  modal: 9999,
-  sidebar: 9998,
-  overlay: 9997,
-  dropdown: 9996,
-  navbar: 9995,
-  tooltip: 9994,
+  zIndexes: {
+    hide: -1,
+    auto: 'auto',
+    base: 0,
+    docked: 10,
+    dropdown: 1000,
+    sticky: 1100,
+    navbar: 1150,
+    sidebar: 1199,
+    banner: 1200,
+    overlay: 1300,
+    modal: 1400,
+    popover: 1500,
+    skipLink: 1600,
+    toast: 1700,
+    tooltip: 1800,
+  },
 };

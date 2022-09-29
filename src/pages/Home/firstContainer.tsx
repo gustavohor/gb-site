@@ -4,6 +4,7 @@ import {CgArrowLongRight} from 'react-icons/cg';
 import {IoMdSquare} from 'react-icons/io';
 import {FirstContainer} from './styles';
 import Typed from 'react-typed';
+import {Link} from 'react-scroll';
 
 export default function firstContainer() {
   return (
@@ -35,7 +36,16 @@ export default function firstContainer() {
             evoluir e entregar com cada vez mais qualidade.
           </span>
           <Button className="button-first-container">
-            Fale Conosco <CgArrowLongRight size={30} className="ArrowRight" />
+            <Link
+              className="contact"
+              to="Contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Fale Conosco <CgArrowLongRight size={30} className="ArrowRight" />
+            </Link>
           </Button>
         </div>
         <div className="div-second-conteiner">
