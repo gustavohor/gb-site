@@ -20,7 +20,9 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="nav-logo-menu">
           {' '}
-          <img src={Logo} alt="Logo" />
+          <a href="/">
+            <img src={Logo} alt="Logo" />
+          </a>
         </div>
         <div className="menuMobile">
           <img

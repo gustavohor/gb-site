@@ -1,15 +1,19 @@
 import {theme} from '@/config/theme';
-import Home from '@/pages/Home';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import {ThemeProvider} from 'styled-components';
 import GlobalFonts from './global/globalFonts';
 import GlobalStyles from './global/globalStyles';
+import Routes from './router';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalFonts />
       <GlobalStyles />
-      <Home />
+      <Navbar />
+      <Routes />
+      <Footer />
     </ThemeProvider>
   );
 }
