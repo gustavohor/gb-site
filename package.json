@@ -1,5 +1,5 @@
 {
-  "name": "gb-admin-front-example",
+  "name": "green-belt",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -23,7 +23,7 @@
     "react-typed": "^1.2.0",
     "react-typing-effect": "^2.0.5",
     "react-use-disclosure": "^6.0.0",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.6",
     "swiper": "^8.4.2",
     "vanilla-masker": "^1.2.0",
     "vite-plugin-svgr": "^2.1.1",
