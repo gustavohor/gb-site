@@ -1,9 +1,9 @@
-import {Footer} from './styles';
-import {FaLinkedinIn} from 'react-icons/fa';
-import {Link} from 'react-scroll';
-import {useDisclosure} from 'react-use-disclosure';
-import {ModalForm} from '@/components/Modal/form';
-import Logo from '../../assets/logo-gb.svg';
+import { Footer } from "./styles";
+import { FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-scroll";
+import { useDisclosure } from "react-use-disclosure";
+import { ModalForm } from "@/components/Modal/form";
+import Logo from "../../assets/logo-gb.svg";
 
 export default function Navbar() {
   const {
@@ -64,8 +64,9 @@ export default function Navbar() {
           <a
             href="https://www.linkedin.com/company/green-belti-tecnologia/"
             target="_blank"
+            rel="noreferrer"
           >
-            <FaLinkedinIn className="FooterRSRight" size={30} color={'#fff'} />
+            <FaLinkedinIn className="FooterRSRight" size={30} color={"#fff"} />
           </a>
         </div>
       </div>

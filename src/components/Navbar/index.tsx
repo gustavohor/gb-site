@@ -1,12 +1,12 @@
-import {useState} from 'react';
-import {CgArrowLongRight} from 'react-icons/cg';
-import Logo from '../../assets/logo-gb.svg';
-import {Container} from './styles';
-import Menu from '@/assets/Icons/Menu.svg';
-import {HiOutlineX} from 'react-icons/hi';
-import {Link} from 'react-scroll';
-import {useDisclosure} from 'react-use-disclosure';
-import {ModalForm} from '@/components/Modal/form';
+import { useState } from "react";
+import { CgArrowLongRight } from "react-icons/cg";
+import Logo from "../../assets/logo-gb.svg";
+import { Container } from "./styles";
+import Menu from "@/assets/Icons/Menu.svg";
+import { HiOutlineX } from "react-icons/hi";
+import { Link } from "react-scroll";
+import { useDisclosure } from "react-use-disclosure";
+import { ModalForm } from "../Modal/form";
 
 export default function Navbar() {
   const [isOpenMenu, setisOpenMenu] = useState(false);
@@ -19,7 +19,7 @@ export default function Navbar() {
     <Container>
       <nav className="navbar">
         <div className="nav-logo-menu">
-          {' '}
+          {" "}
           <a href="/">
             <img src={Logo} alt="Logo" />
           </a>

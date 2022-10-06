@@ -1,12 +1,12 @@
-import {useState} from 'react';
-import Accordion from '@/@core/components/Accordion';
-import {Products} from './styles';
-import info from '@/assets/Icons/Info.svg';
-import {Sliders} from '@/utils/mock';
-import AppStore from '@/assets/Imagens/LogoAppStore.svg';
-import GooglePlay from '@/assets/Imagens/LogoGooglePlay.svg';
+import { useState } from "react";
+import Accordion from "@/@core/components/Accordion";
+import { Products } from "./styles";
+import info from "@/assets/Icons/Info.svg";
+import { Sliders } from "@/utils/mock";
+import AppStore from "@/assets/Imagens/LogoAppStore.svg";
+import GooglePlay from "@/assets/Imagens/LogoGooglePlay.svg";
 
-export default function products() {
+export default function Product() {
   const [focusSlide, setFocusSlide] = useState(Sliders[0]);
   const [isOpen] = useState(true);
 
@@ -18,7 +18,7 @@ export default function products() {
           <h2 className="productH2">Alguns de nossos sistemas e produtos</h2>
         </section>
         <section>
-          <img src={AppStore} alt="App Store" style={{marginRight: '1rem'}} />
+          <img src={AppStore} alt="App Store" style={{ marginRight: "1rem" }} />
           <img src={GooglePlay} alt="Google Play" />
         </section>
       </div>
@@ -28,8 +28,8 @@ export default function products() {
             <li
               className={
                 focusSlide.id === slider.id
-                  ? 'productContainerActive'
-                  : 'productText'
+                  ? "productContainerActive"
+                  : "productText"
               }
               key={slider.id}
               onClick={() => {
@@ -65,8 +65,8 @@ export default function products() {
                   <li
                     className={
                       focusSlide.id === slider.id
-                        ? 'productContainerActive'
-                        : 'productText'
+                        ? "productContainerActive"
+                        : "productText"
                     }
                     key={slider.id}
                     onClick={() => {

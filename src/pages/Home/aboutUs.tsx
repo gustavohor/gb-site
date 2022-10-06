@@ -1,16 +1,16 @@
-import {useRef, useState, useEffect, useCallback} from 'react';
-import {AboutUsContainer, AboutUsMVVContainer} from './styles';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {BsArrowRightCircle, BsArrowLeftCircle} from 'react-icons/bs';
-import {Autoplay} from 'swiper';
-import {aboutUsText, aboutUsMVV} from '@/utils/mock';
-import Star from '@/assets/Icons/Star.svg';
-import Like from '@/assets/Icons/Like.svg';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { useRef, useState, useEffect, useCallback } from "react";
+import { AboutUsContainer, AboutUsMVVContainer } from "./styles";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { BsArrowRightCircle, BsArrowLeftCircle } from "react-icons/bs";
+import { Autoplay } from "swiper";
+import { aboutUsText, aboutUsMVV } from "@/utils/mock";
+import Star from "@/assets/Icons/Star.svg";
+import Like from "@/assets/Icons/Like.svg";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-export default function aboutUs() {
+export default function AboutUs() {
   const [currentIndex, updateCurrentIndex] = useState(0);
   const swiperRef = useRef() as any;
 
@@ -28,19 +28,19 @@ export default function aboutUs() {
 
   const updateIndex = useCallback(
     () => updateCurrentIndex(swiperRef.current.swiper.realIndex),
-    [],
+    []
   );
 
   useEffect(() => {
     const swiperInstance = swiperRef.current.swiper;
 
     if (swiperInstance) {
-      swiperInstance.on('slideChange', updateIndex);
+      swiperInstance.on("slideChange", updateIndex);
     }
 
     return () => {
       if (swiperInstance) {
-        swiperInstance.off('slideChange', updateIndex);
+        swiperInstance.off("slideChange", updateIndex);
       }
     };
   }, [updateIndex]);
@@ -73,14 +73,14 @@ export default function aboutUs() {
                   <span>{item.text}</span>
                 </SwiperSlide>
               ))}
-              <div className="div-Button" style={{cursor: 'pointer'}}>
+              <div className="div-Button" style={{ cursor: "pointer" }}>
                 <button
                   className="buttonPrev"
                   onClick={() => goPrev()}
                   style={
                     currentIndex === 0
-                      ? {color: 'gray', cursor: 'not-allowed'}
-                      : {cursor: 'pointer'}
+                      ? { color: "gray", cursor: "not-allowed" }
+                      : { cursor: "pointer" }
                   }
                 >
                   <BsArrowLeftCircle size={32} />
@@ -90,8 +90,8 @@ export default function aboutUs() {
                   className="buttonNext"
                   style={
                     currentIndex === aboutUsText.length - 1
-                      ? {color: 'gray', cursor: 'not-allowed'}
-                      : {cursor: 'pointer'}
+                      ? { color: "gray", cursor: "not-allowed" }
+                      : { cursor: "pointer" }
                   }
                 >
                   <BsArrowRightCircle size={32} />

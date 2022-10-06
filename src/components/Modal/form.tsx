@@ -1,17 +1,17 @@
-import {Dispatch, SetStateAction, useEffect, useState} from 'react';
-import Input from '@/@core/components/Input';
-import {Modal, ModalBody, ModalFooter} from '@core/components/Modal';
-import Dropzone from '@/@core/components/Dropzone';
-import {Container} from './styles';
-import {useDisclosure} from 'react-use-disclosure';
-import {ModalSuccess} from './success';
+import { Dispatch, SetStateAction } from "react";
+import Input from "@/@core/components/Input";
+import { Modal, ModalBody, ModalFooter } from "@/@core/components/Modal";
+import Dropzone from "@/@core/components/Dropzone";
+import { Container } from "./styles";
+import { useDisclosure } from "react-use-disclosure";
+import { ModalSuccess } from "./success";
 
 interface PropsModalForm {
   isOpen: boolean;
   toggle: Dispatch<SetStateAction<boolean>>;
 }
 
-export function ModalForm({isOpen, toggle}: PropsModalForm) {
+export function ModalForm({ isOpen, toggle }: PropsModalForm) {
   function CloseModal() {
     toggle(false);
   }

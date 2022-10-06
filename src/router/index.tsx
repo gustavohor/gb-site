@@ -1,7 +1,6 @@
-import React from 'react';
-import {Routes as Switch, Route, BrowserRouter} from 'react-router-dom';
-import Home from '@/pages/Home/index';
-import Privacy from '@/pages/Privacy';
+import { Routes as Switch, Route, BrowserRouter } from "react-router-dom";
+import Home from "@/pages/Home/index";
+import Privacy from "@/pages/Privacy";
 
 function Routes() {
   return (

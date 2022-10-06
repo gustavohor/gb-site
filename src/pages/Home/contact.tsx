@@ -1,5 +1,5 @@
-import {ContactContainer} from './styles';
-import {FiMail, FiPhone, FiClock, FiMapPin} from 'react-icons/fi';
+import { ContactContainer } from "./styles";
+import { FiMail, FiPhone, FiClock, FiMapPin } from "react-icons/fi";
 
 export default function team() {
   return (
@@ -12,33 +12,36 @@ export default function team() {
             <p>
               <a
                 href="mailto:contato@greenbelt.com"
-                style={{maxWidth: '256px'}}
+                style={{ maxWidth: "256px" }}
               >
                 <FiMail
                   size={30}
-                  style={{color: '#fff', marginRight: '1rem '}}
-                />{' '}
+                  style={{ color: "#fff", marginRight: "1rem " }}
+                />{" "}
                 contato@greenbelt.com
               </a>
             </p>
             <p>
-              <a href="tel:(27)99928-2654" style={{maxWidth: '256px'}}>
+              <a href="tel:(27)99928-2654" style={{ maxWidth: "256px" }}>
                 <FiPhone
                   size={30}
-                  style={{color: '#fff', marginRight: '1rem '}}
-                />{' '}
+                  style={{ color: "#fff", marginRight: "1rem " }}
+                />{" "}
                 (27) 99928-2654
               </a>
             </p>
-            <p style={{maxWidth: '260px'}}>
-              <FiClock size={40} style={{color: '#fff', marginRight: '1rem'}} />{' '}
+            <p style={{ maxWidth: "260px" }}>
+              <FiClock
+                size={40}
+                style={{ color: "#fff", marginRight: "1rem" }}
+              />{" "}
               Seg a Sex de 08h as 18h / sab de 08h as 12h
             </p>
-            <p style={{maxWidth: '360px'}}>
+            <p style={{ maxWidth: "360px" }}>
               <FiMapPin
                 size={40}
-                style={{color: '#fff', marginRight: '1rem'}}
-              />{' '}
+                style={{ color: "#fff", marginRight: "1rem" }}
+              />{" "}
               R. Antonio Leandro Da Silva, 60 - Alto Lage 29151-035, Cariacica -
               ES
             </p>
@@ -50,7 +53,8 @@ export default function team() {
             width="500"
             height="300"
             loading="lazy"
-          ></iframe>
+            title="Google Maps"
+          />
         </div>
         <div className="div-ContactForm">
           <h2>Fale conosco</h2>

@@ -1,15 +1,15 @@
-import {useRef, useState, useEffect, useCallback} from 'react';
-import {BsArrowRightCircle, BsArrowLeftCircle} from 'react-icons/bs';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import quotation from '@/assets/Icons/quotation.svg';
-import quotationInv from '@/assets/Icons/quotationI.svg';
-import {TestimonialContainer} from './styles';
-import {People} from '@/utils/mock';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { useRef, useState, useEffect, useCallback } from "react";
+import { BsArrowRightCircle, BsArrowLeftCircle } from "react-icons/bs";
+import { Swiper, SwiperSlide } from "swiper/react";
+import quotation from "@/assets/Icons/quotation.svg";
+import quotationInv from "@/assets/Icons/quotationI.svg";
+import { TestimonialContainer } from "./styles";
+import { People } from "@/utils/mock";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-export default function testimonial() {
+export default function Testimonial() {
   const [currentIndex, updateCurrentIndex] = useState(0);
   const swiperRef = useRef() as any;
 
@@ -27,19 +27,19 @@ export default function testimonial() {
 
   const updateIndex = useCallback(
     () => updateCurrentIndex(swiperRef.current.swiper.realIndex),
-    [],
+    []
   );
 
   useEffect(() => {
     const swiperInstance = swiperRef.current.swiper;
 
     if (swiperInstance) {
-      swiperInstance.on('slideChange', updateIndex);
+      swiperInstance.on("slideChange", updateIndex);
     }
 
     return () => {
       if (swiperInstance) {
-        swiperInstance.off('slideChange', updateIndex);
+        swiperInstance.off("slideChange", updateIndex);
       }
     };
   }, [updateIndex]);
@@ -80,14 +80,14 @@ export default function testimonial() {
               </SwiperSlide>
             ))}
 
-            <div className="div-Button" style={{cursor: 'pointer'}}>
+            <div className="div-Button" style={{ cursor: "pointer" }}>
               <button
                 className="buttonPrev"
                 onClick={() => goPrev()}
                 style={
                   currentIndex === 0
-                    ? {color: 'gray', cursor: 'not-allowed'}
-                    : {cursor: 'pointer'}
+                    ? { color: "gray", cursor: "not-allowed" }
+                    : { cursor: "pointer" }
                 }
               >
                 <BsArrowLeftCircle size={32} />
@@ -97,8 +97,8 @@ export default function testimonial() {
                 className="buttonNext"
                 style={
                   currentIndex === People.length - 1
-                    ? {color: 'gray', cursor: 'not-allowed'}
-                    : {cursor: 'pointer'}
+                    ? { color: "gray", cursor: "not-allowed" }
+                    : { cursor: "pointer" }
                 }
               >
                 <BsArrowRightCircle size={32} />

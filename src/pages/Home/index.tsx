@@ -1,11 +1,11 @@
-import {Container} from './styles';
-import FirstContainer from './firstContainer';
-import Partner from './partner';
-import AboutUs from './aboutUs';
-import Products from './Products';
-import Team from './team';
-import Testimonial from './testimonial';
-import Contact from './contact';
+import { Container } from "./styles";
+import FirstContainer from "./firstContainer";
+import Partner from "./partner";
+import AboutUs from "./aboutUs";
+import Product from "./products";
+import Team from "./team";
+import Testimonial from "./testimonial";
+import Contact from "./contact";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <FirstContainer />
         <Partner />
         <AboutUs />
-        <Products />
+        <Product />
         <Team />
         <Testimonial />
         <Contact />
