@@ -13,10 +13,10 @@ export const Sliders = [
     id: "01",
     title: "Gestão de despesa",
     subTitle:
-      "Tenha o controle das despedas de todo o seu negócio em um só lugar",
+      "Tenha o controle das despedas de todo o seu negócio em um só lugar.",
     img: screen,
     imgDescrition:
-      "O RDV (Registro de Despesa de Viagem) é um sistema de gestão que auxilia na administração de despesas do seu negócio. A ferramenta cuida de todas as despesas relacionadas gastos do seu funcionário, permitindo que você tenha mais controle dos gastos.",
+      "O RDV (Registro de Despesa de Viagem) é um sistema que oferece soluções de controle e gestão administrativa para seu negócio. Ele administra todas as despesas de viagem associadas aos seus colaboradores. Informação combinada com meios adequados de controle lhe permitirá mais eficiência na gestão dos recursos de seu negócio.",
   },
   {
     id: "02",
@@ -25,24 +25,24 @@ export const Sliders = [
       "Tenha o controle de todos os seus clientes e potenciais em um só lugar.",
     img: screen2,
     imgDescrition:
-      "O CRM é um sistema onde armazena informações de clientes atuais e potenciais nome, endereço, número de telefone, e suas atividades e pontos de contato com a empresa, incluindo visitas a sites, ligações telefônicas, e-mails, entre outras interações.",
+      "O CRM (Customer Relationship Management) é uma ferramenta de administração de contatos, que visa gerenciar um banco de informações de clientes atuais e potenciais, tal como por exemplo: Nome, endereço, número de telefone, suas atividades e pontos de contato com a empresa, incluindo visitas a sites, ligações telefônicas, e-mails, entre outras interações.",
   },
   {
     id: "03",
     title: "Mapa de entrega",
-    subTitle: "Tenha todo o controle de entrega de mercadorias em um só lugar",
+    subTitle: "Tenha todo o controle de entrega de mercadorias em um só lugar.",
     img: screen3,
     imgDescrition:
-      " O Mapa de Entrega é um sistema de gestão que auxilia na administração de entrega de mercadorias do seu negócio. A ferramenta cuida de todas entregas para os cliente, e tendo como gerir a frota através do mesmo.",
+      "O Mapa de Entrega administra de forma simples e objetiva a gestão de entrega de mercadorias do seu negócio. A ferramenta combinar uma visão orgânica e geo referenciada das entregas com a gestão de frotas.",
   },
   {
     id: "04",
     title: "Força de vendas",
     subTitle:
-      "Tenha um aplicativo para realizar venda externa comunicando com a loja",
+      "Tenha um aplicativo para realizar venda externa comunicando com a loja.",
     img: screen4,
     imgDescrition:
-      "O força de vendas é um sistema que auxilia o usuário realização de uma venda. A ferramenta tem como objetivo a realização da venda fora da unidade física, podendo ser residência do cliente, dando mais conforto, praticidade e estreitando a comunicação com o nosso cliente final.",
+      "O Força de Vendas tem como missão potencializar dados, informações e a mobilidade de vendas. O objetivo primário é apoiar a concretização das vendas externas. Essa solução é para uso além dos limites do estabelecimento comercial, ou seja, junto ao cliente. É uma opção prática que estreita relacionamentos com o cliente final.",
   },
 ];
 
@@ -53,7 +53,7 @@ export const People = [
     name: "Raphael Covre",
     charge: "CEO Casa do adubo",
     testimonial:
-      "A Green Belt sempre foi uma empresa parceira da Casa do Adubo. Com eles conseguimos crescer exponencialmente! ",
+      "A Green Belt sempre foi uma empresa parceira da Casa do Adubo. Com eles conseguimos crescer exponencialmente!",
   },
   {
     id: 2,
@@ -72,7 +72,7 @@ export const aboutUsText = [
   },
   {
     id: 2,
-    text: "Acreditamos que qualidade e equipe certificada são o básico para entregar os resultados esperados pelos nossos clientes, e por isso, investimos continuamente em inovação dentro do próprio time. O ajustes de processos em todas as áreas é constante para otimizar o que fazemos, ganhado tempo e qualidades. Tecnologia, processos e pessoas existem para evoluir - Entendemos isso e nos esforçamos para nos adaptar.",
+    text: "Acreditamos que qualidade e equipe certificada são o básico para entregar os resultados esperados pelos nossos clientes, e por isso, investimos continuamente em inovação dentro do próprio time. Os ajustes de processos em todas as áreas é constante para otimizar o que fazemos, ganhando tempo e qualidade. Tecnologia, processos e pessoas existem para evoluir - Entendemos isso e nos esforçamos para nos adaptar.",
   },
   {
     id: 3,

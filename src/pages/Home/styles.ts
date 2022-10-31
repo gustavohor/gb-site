@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -491,6 +491,8 @@ export const AboutUsMVVContainer = styled.div`
 export const Products = styled.div`
   width: 100%;
   padding: 5rem 0;
+  min-height: 945px;
+  height: 945px;
   background: rgba(2, 53, 53, 0.9);
   display: flex;
   flex-direction: column;
@@ -1146,8 +1148,8 @@ export const ContactContainer = styled.div`
       color: #2c2c2c;
       padding-bottom: 2rem;
     }
-    input[type='text'],
-    [type='email'],
+    input[type="text"],
+    [type="email"],
     textarea {
       width: 100%;
       padding: 11px 10px 11px 15px;
@@ -1159,7 +1161,7 @@ export const ContactContainer = styled.div`
       resize: vertical;
     }
 
-    input[type='submit'] {
+    input[type="submit"] {
       background-color: rgba(2, 53, 53, 0.9);
       color: white;
       width: 100%;

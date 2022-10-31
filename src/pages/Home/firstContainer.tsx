@@ -1,10 +1,10 @@
-import Button from '@/@core/components/Button';
-import Banner from '@/assets/Imagens/bannerTop.png';
-import {CgArrowLongRight} from 'react-icons/cg';
-import {IoMdSquare} from 'react-icons/io';
-import {FirstContainer} from './styles';
-import Typed from 'react-typed';
-import {Link} from 'react-scroll';
+import Button from "@/@core/components/Button";
+import Banner from "@/assets/Imagens/bannerTop.png";
+import { CgArrowLongRight } from "react-icons/cg";
+import { IoMdSquare } from "react-icons/io";
+import { FirstContainer } from "./styles";
+import Typed from "react-typed";
+import { Link } from "react-scroll";
 
 export default function firstContainer() {
   return (
@@ -17,13 +17,13 @@ export default function firstContainer() {
           <h1 className="title">
             Entregamos produtos com<br></br>
             <b className="bold-title">
-              {' '}
+              {" "}
               <Typed
                 strings={[
-                  'experiências autênticas.',
-                  'código limpo e escalável',
-                  'usabilidade planejada',
-                  'foco nos resultados',
+                  "experiências autênticas.",
+                  "código limpo e escalável.",
+                  "usabilidade planejada.",
+                  "foco nos resultados.",
                 ]}
                 typeSpeed={90}
                 backSpeed={30}
