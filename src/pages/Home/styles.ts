@@ -96,6 +96,7 @@ export const FirstContainer = styled.div`
   }
   @media screen and (max-width: 1300px) {
     padding: 2rem 1rem !important;
+
     .div-first-conteiner {
       width: 50%;
       text-align: left;
@@ -117,6 +118,7 @@ export const FirstContainer = styled.div`
     flex-direction: column;
     width: 100%;
     padding: 0 1rem !important;
+    height: 700px;
     .FirstContainer {
       max-width: 100%;
     }
@@ -668,6 +670,8 @@ export const Products = styled.div`
   }
   @media screen and (max-width: 900px) {
     padding: 3.5rem 1rem 3.5rem 1rem;
+    height: 1200px;
+    min-height: 1200px;
     .productHeader {
       flex-direction: column;
       align-items: center;
